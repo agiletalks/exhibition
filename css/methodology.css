@@ -24,7 +24,7 @@
       margin: 0;
     }
 
-    header {
+    .subpage-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 100px 24px 120px 24px;
@@ -33,7 +33,7 @@
       overflow: hidden;
     }
 
-    header::after {
+    .subpage-header::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -535,7 +535,7 @@
       margin: 0;
     }
 
-    header {
+    .subpage-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 100px 24px 120px 24px;
@@ -544,7 +544,7 @@
       overflow: hidden;
     }
 
-    header::after {
+    .subpage-header::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -1076,7 +1076,7 @@
       margin: 0;
     }
 
-    header {
+    .subpage-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 100px 24px 120px 24px;
@@ -1085,7 +1085,7 @@
       overflow: hidden;
     }
 
-    header::after {
+    .subpage-header::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -1729,7 +1729,7 @@
       margin: 0;
     }
 
-    header {
+    .subpage-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 100px 24px 120px 24px;
@@ -1738,7 +1738,7 @@
       overflow: hidden;
     }
 
-    header::after {
+    .subpage-header::after {
       content: '';
       position: absolute;
       bottom: 0;

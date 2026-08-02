@@ -7,11 +7,55 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tailwind.css">
   <link rel="stylesheet" href="../css/methodology.css">
 </head>
 <body>
 
-<header>
+
+  
+    <!-- Header -->
+    <header class="glass-header sticky top-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <a href="../index-en.html" class="font-extrabold text-xl tracking-tight text-[#0F2A1C] hover:opacity-80 transition-opacity">Terra School | Earth</a>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-[#1C2421] text-sm">
+          <!-- Design Thinking with Dropdown -->
+          <div class="relative group py-2">
+            <a href="../index-en.html#methodology" class="hover:text-[#B35C24] transition-colors flex items-center gap-1 cursor-pointer">
+              Design Thinking
+              <svg class="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 mt-2 w-56 bg-white border border-stone-200/80 rounded-2xl shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+              <a href="discover-en.html" class="block px-4 py-2.5 text-xs text-stone-600 hover:text-[#B35C24] hover:bg-stone-50 transition-colors font-bold">01. Discover & Context Research</a>
+              <a href="define-en.html" class="block px-4 py-2.5 text-xs text-stone-600 hover:text-[#B35C24] hover:bg-stone-50 transition-colors font-bold">02. Define & Problem Framing</a>
+              <a href="develop-en.html" class="block px-4 py-2.5 text-xs text-stone-600 hover:text-[#B35C24] hover:bg-stone-50 transition-colors font-bold">03. Develop & Co-creation</a>
+              <a href="deliver-en.html" class="block px-4 py-2.5 text-xs text-stone-600 hover:text-[#B35C24] hover:bg-stone-50 transition-colors font-bold">04. Deliver & MVP Validation</a>
+            </div>
+          </div>
+
+          <a href="../index-en.html#timeline" class="hover:text-[#B35C24] transition-colors">Learning Journey</a>
+          <a href="../index-en.html#quotes" class="hover:text-[#B35C24] transition-colors">Voices of Action</a>
+          <a href="../index-en.html#partners" class="hover:text-[#B35C24] transition-colors">Partners</a>
+        </nav>
+
+        <div class="flex items-center gap-2 bg-[#FAF5F0] border border-orange-200/40 rounded-full p-0.5">
+          <a href="discover.html" class="px-3 py-1 rounded-full text-xs font-black transition-all text-stone-500 hover:text-stone-800">中</a>
+          <a href="discover-en.html" class="px-3 py-1 rounded-full text-xs font-black transition-all bg-[#B35C24] text-white shadow-sm">EN</a>
+          <a href="discover-ja.html" class="px-3 py-1 rounded-full text-xs font-black transition-all text-stone-500 hover:text-stone-800">JA</a>
+        </div>
+      </div>
+    </header>
+    
+
+  <header class="subpage-header">
+    
   <div class="header-content">
     <div class="breadcrumb">
       <a href="../index-en.html">Home</a>
@@ -23,7 +67,9 @@
     <span class="badge">Discover / Context Research</span>
     <h1>Field Research Handnotes on Urban-Rural Co-Creation & Sustainable Food & Ag</h1>
   </div>
-</header>
+
+  </header>
+      
 
 <main>
   <div class="intro-card">
