@@ -1,0 +1,17 @@
+# Ignore raw sorted camera photos to prevent repository bloat (total 1.5 GB)
+# These files remain fully organized locally for your use.
+assets/photos/day1/DSC_*
+assets/photos/day1/IMG_*
+assets/photos/day2/DSC_*
+assets/photos/day2/IMG_*
+assets/photos/day3/DSC_*
+assets/photos/day3/IMG_*
+assets/photos/day4/DSC_*
+assets/photos/day4/IMG_*
+assets/photos/day5/DSC_*
+assets/photos/day5/IMG_*
+assets/photos/misc/misc_*
+assets/photos/misc/S_*
+assets/photos/misc/IMG_*
+*.zip
+*.log
