@@ -579,19 +579,21 @@
     }
 
   
+    
     /* Breadcrumb & Article Navigation */
     .breadcrumb {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
       font-size: 0.9rem;
       font-weight: 700;
-      margin-bottom: 32px;
-      color: var(--text-muted);
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, 0.7);
     }
     .breadcrumb a {
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -599,11 +601,11 @@
       color: var(--secondary);
     }
     .breadcrumb .separator {
-      color: var(--border);
+      color: rgba(255, 255, 255, 0.4);
       font-weight: 400;
     }
     .breadcrumb .current {
-      color: var(--primary);
+      color: #ffffff;
     }
     .article-navigation {
       display: flex;
@@ -660,19 +662,19 @@
 
 <header>
   <div class="header-content">
+    <div class="breadcrumb">
+      <a href="../">成果展首頁</a>
+      <span class="separator">/</span>
+      <a href="../#methodology">設計思考</a>
+      <span class="separator">/</span>
+      <span class="current">Develop 創意共創</span>
+    </div>
     <span class="badge">Develop 篇 (開發發想階段)</span>
     <h1>突破常軌的創意發散：六格聯想法與哆啦A夢道具的跨文化撞擊</h1>
     </div>
 </header>
 
 <main>
-  <div class="breadcrumb">
-    <a href="../index.html">成果展首頁</a>
-    <span class="separator">/</span>
-    <a href="../index.html#methodology">設計思考</a>
-    <span class="separator">/</span>
-    <span class="current">Develop 創意共創</span>
-  </div>
   <div class="intro-card">
     <p class="intro-text">
       在 Define（定義）階段，我們成功將複雜的質化訪談編碼收斂，並為四個小組分別確立了極具挑戰性的 HMW（我們該如何）設計問題。然而，定義出好問題只是第一步，隨後而來的 <strong>Develop（發想開發）</strong> 階段，其核心目標是打破常理、拓寬思路。為了防止團隊陷入「直覺式、平庸」的解決方案，本次共學營在發想階段導入了至少兩種獨特的發散技術：跨越台日文化疆界的「哆啦A夢道具連想法」，以及限時高壓的 A4 六格輪流發想。以下是我們在創意的未知水域中，瘋狂發散的實踐紀錄。

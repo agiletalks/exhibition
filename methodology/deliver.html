@@ -489,19 +489,21 @@
       line-height: 1.4;
     }
   
+    
     /* Breadcrumb & Article Navigation */
     .breadcrumb {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
       font-size: 0.9rem;
       font-weight: 700;
-      margin-bottom: 32px;
-      color: var(--text-muted);
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, 0.7);
     }
     .breadcrumb a {
-      color: var(--text-muted);
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -509,11 +511,11 @@
       color: var(--secondary);
     }
     .breadcrumb .separator {
-      color: var(--border);
+      color: rgba(255, 255, 255, 0.4);
       font-weight: 400;
     }
     .breadcrumb .current {
-      color: var(--primary);
+      color: #ffffff;
     }
     .article-navigation {
       display: flex;
@@ -570,6 +572,13 @@
 
 <header>
   <div class="header-content">
+    <div class="breadcrumb">
+      <a href="../">成果展首頁</a>
+      <span class="separator">/</span>
+      <a href="../#methodology">設計思考</a>
+      <span class="separator">/</span>
+      <span class="current">Deliver 落地驗證</span>
+    </div>
     <span class="badge">Deliver 篇 (成果階段)</span>
     <h1>從實地調研到驚艷地之校成果展：四組 MVP 專案發表</h1>
     <p class="subtitle">泰拉學校 地之校 Design Thinking 成果手札 | 第四篇</p>
@@ -577,13 +586,6 @@
 </header>
 
 <main>
-  <div class="breadcrumb">
-    <a href="../index.html">成果展首頁</a>
-    <span class="separator">/</span>
-    <a href="../index.html#methodology">設計思考</a>
-    <span class="separator">/</span>
-    <span class="current">Deliver 落地驗證</span>
-  </div>
   <div class="intro-card">
     <p class="intro-text">
       經歷了 Discover (發散探索) 的深度訪談、Define (聚焦定義) 的痛點收斂，以及 Develop (發想開發) 的創意激盪，本屆「泰拉學校—地之校」的跨國共創團隊迎來了最後的終點站——<strong>Deliver (交付落地驗證)</strong>。這一步不只是在紙面上做簡報練習，而是要將實地產出的點子做成低保真或數位原型，在員山老農、南澳青農與佛光大學專家的面前進行面對面測試，驗證方案的可行性。學員們以出色的完整度展現了四組 MVP 設計提案，為地方共創與永續食農注入了新的思維。
