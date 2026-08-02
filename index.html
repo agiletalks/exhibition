@@ -73,7 +73,7 @@
           title: "2026 泰拉學校・地之校成果展",
           subtitle: "城鄉共創與食農永續：台日跨國行動 × AI協作的設計思考",
           desc: "一場早稻田大學與國立清華大學青年的宜蘭田野實踐，在泥土與科技的交界，探索永續食農的真實解答。",
-          ctaVideo: "觀看活動紀錄影片",
+          ctaVideo: "活動紀錄",
           ctaShowcase: "進入線上成果展"
         },
         timeline: {
@@ -116,7 +116,7 @@
           title: "2026 Terra Earth School Exhibition",
           subtitle: "Urban-Rural Co-Creation and Sustainable Food & Ag: Waseda × NTHU Cross-border Action × AI-Collaborative Design Thinking",
           desc: "A field action in Yilan by Waseda and Tsinghua University youth. Exploring sustainable food & agriculture at the boundary of land and AI.",
-          ctaVideo: "Watch Recap Video",
+          ctaVideo: "Documentary",
           ctaShowcase: "Explore Showcase"
         },
         timeline: {
@@ -159,7 +159,7 @@
           title: "2026 テラ学校・地の校 成果展",
           subtitle: "都市と農村の共創と持続可能な食と農：日台共同行動 × AI協調のデザイン思考",
           desc: "早稲田大学と台湾清華大学の学生による宜蘭でのフィールドワーク。土とテクノロジーの境界で、持続可能な食農の答えを探る。",
-          ctaVideo: "動画を見る",
+          ctaVideo: "活動記録",
           ctaShowcase: "オンライン成果展へ"
         },
         timeline: {
@@ -528,21 +528,15 @@ function App() {
                     onClick={() => setActiveVideo({ video: "https://www.youtube.com/embed/Qaa25f1oFNw" })} 
                     className="relative w-full max-w-md aspect-video lg:aspect-square xl:aspect-video rounded-3xl overflow-hidden group cursor-pointer border border-white/10 transition-all duration-500 hover:scale-[1.03] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] hover:shadow-[#B35C24]/10"
                   >
-                    {/* Thumbnail Image */}
+                    {/* Thumbnail Image: Visual Map */}
                     <img 
-                      src="assets/photos/day5/graduation_certificates_group_photo.jpg" 
+                      src="assets/terra-earth-school.png" 
                       alt="泰拉學校活動紀錄影片封面" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent group-hover:via-black/50 transition-all duration-500"></div>
-                    
-                    {/* HD / 10m Badge */}
-                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-xs font-semibold text-stone-200 flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                      10 MINS
-                    </div>
 
                     {/* Play Button Icon */}
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -557,11 +551,8 @@ function App() {
 
                     {/* Text Overlay at Bottom */}
                     <div className="absolute bottom-6 left-6 right-6 text-left pointer-events-none">
-                      <span className="text-orange-400 font-bold text-xs uppercase tracking-widest block mb-1">Documentary Video</span>
+                      <span className="text-orange-400 font-bold text-xs uppercase tracking-widest block mb-1">Documentary</span>
                       <h3 className="text-white text-xl font-bold leading-snug drop-shadow-md group-hover:text-orange-200 transition-colors duration-300">{t.hero.ctaVideo}</h3>
-                      <p className="text-stone-300 text-xs mt-1.5 opacity-90 font-medium">
-                        {lang === 'zh' ? '點擊播放 10 分鐘精彩活動全紀錄' : (lang === 'ja' ? 'クリックして10分間の記録映像を再生' : 'Click to watch 10 min recap documentary')}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -577,44 +568,30 @@ function App() {
               <p className="text-stone-500 text-sm md:text-base mt-2">{t.methodology.subtitle}</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto items-stretch">
-              {/* Left Column: Visual Map (7 cols) */}
-              <div className="lg:col-span-7 flex flex-col justify-center">
-                <div className="map-container bg-white border border-stone-200 rounded-3xl overflow-hidden relative group shadow-sm hover:shadow-md transition-all duration-300">
-                  <img src="assets/terra-earth-school.png" alt="2026 Terra Earth School Graphic Recording" className="w-full h-auto block" />
-                  
-                  {/* Interactive hotlinks pointing directly to respective sub-pages */}
-                  <a href="methodology/discover.html" className="absolute top-[35%] left-[20%] w-[12%] h-[20%] border-2 border-dashed border-orange-500/0 hover:border-orange-500/80 bg-orange-500/0 hover:bg-orange-500/10 rounded-full transition-all duration-300 flex items-center justify-center text-orange-600 font-extrabold text-xs opacity-0 hover:opacity-100 shadow-md">Discover ➔</a>
-                  <a href="methodology/define.html" className="absolute top-[35%] left-[33%] w-[12%] h-[20%] border-2 border-dashed border-orange-500/0 hover:border-orange-500/80 bg-orange-500/0 hover:bg-orange-500/10 rounded-full transition-all duration-300 flex items-center justify-center text-orange-600 font-extrabold text-xs opacity-0 hover:opacity-100 shadow-md">Define ➔</a>
-                  <a href="methodology/develop.html" className="absolute top-[35%] left-[58%] w-[12%] h-[20%] border-2 border-dashed border-orange-500/0 hover:border-orange-500/80 bg-orange-500/0 hover:bg-orange-500/10 rounded-full transition-all duration-300 flex items-center justify-center text-orange-600 font-extrabold text-xs opacity-0 hover:opacity-100 shadow-md">Develop ➔</a>
-                  <a href="methodology/deliver.html" className="absolute top-[35%] left-[71%] w-[12%] h-[20%] border-2 border-dashed border-orange-500/0 hover:border-orange-500/80 bg-orange-500/0 hover:bg-orange-500/10 rounded-full transition-all duration-300 flex items-center justify-center text-orange-600 font-extrabold text-xs opacity-0 hover:opacity-100 shadow-md">Deliver ➔</a>
-                </div>
-              </div>
-
-              {/* Right Column: 4 Methodology Stages Cards (5 cols) */}
-              <div className="lg:col-span-5 flex flex-col justify-between gap-4">
-                {t.methodology.stages.map((stage, idx) => (
-                  <a 
-                    key={idx} 
-                    href={stage.link}
-                    className="bg-white border border-stone-200/60 rounded-2xl p-5 flex flex-row items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 group border-l-4 border-l-[#0F2A1C] hover:border-l-[#B35C24] cursor-pointer"
-                  >
-                    {/* Stage number */}
-                    <div className="w-10 h-10 rounded-full bg-stone-100 group-hover:bg-orange-100 flex items-center justify-center text-stone-500 group-hover:text-[#B35C24] font-black text-sm transition-colors flex-shrink-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {t.methodology.stages.map((stage, idx) => (
+                <a 
+                  key={idx} 
+                  href={stage.link}
+                  className="bg-white border border-stone-200/60 rounded-2xl p-6 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-all duration-300 group border-t-4 border-t-[#0F2A1C] hover:border-t-[#B35C24] cursor-pointer min-h-[160px]"
+                >
+                  {/* Top Row: Stage Number and Arrow */}
+                  <div className="flex justify-between items-center w-full">
+                    <div className="w-10 h-10 rounded-full bg-stone-100 group-hover:bg-orange-100 flex items-center justify-center text-stone-500 group-hover:text-[#B35C24] font-black text-sm transition-colors">
                       {idx + 1}
                     </div>
-                    {/* Stage content */}
-                    <div className="flex-grow min-w-0">
-                      <h3 className="font-extrabold text-sm md:text-base text-[#0F2A1C] group-hover:text-[#B35C24] transition-colors truncate">{stage.title}</h3>
-                      <p className="text-stone-500 text-[11px] md:text-xs leading-relaxed mt-0.5 line-clamp-2">{stage.desc}</p>
-                    </div>
-                    {/* Go arrow */}
-                    <div className="text-stone-400 group-hover:text-[#B35C24] transform group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 text-sm font-black pl-2">
+                    <div className="text-stone-400 group-hover:text-[#B35C24] transform group-hover:translate-x-1 transition-all duration-300 text-sm font-black">
                       ➔
                     </div>
-                  </a>
-                ))}
-              </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="w-full flex-grow flex flex-col justify-end mt-4">
+                    <h3 className="font-extrabold text-base text-[#0F2A1C] group-hover:text-[#B35C24] transition-colors">{stage.title}</h3>
+                    <p className="text-stone-500 text-xs leading-relaxed mt-2 line-clamp-3">{stage.desc}</p>
+                  </div>
+                </a>
+              ))}
             </div>
           </section>
 
