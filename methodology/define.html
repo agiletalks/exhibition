@@ -469,6 +469,71 @@
       line-height: 1.4;
     }
 
+  
+    /* Back Home & Article Navigation */
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      transition: color 0.3s;
+    }
+    .back-home-link:hover {
+      color: var(--secondary);
+    }
+    .article-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 64px;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+    }
+    .nav-card {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .nav-card.prev {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .nav-card.next {
+      align-items: flex-end;
+      text-align: right;
+    }
+    .nav-card:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 42, 28, 0.04);
+    }
+    .nav-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .nav-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+    .nav-card:hover .nav-title {
+      color: var(--secondary);
+    }
   </style>
 </head>
 <body>
@@ -482,6 +547,7 @@
 </header>
 
 <main>
+  <a href="../index.html#methodology" class="back-home-link">← 返回設計思考指南</a>
   <div class="intro-card">
     <p class="intro-text">
       面對複雜的社會與產業情境，引入設計思考作為探索解決方案的方法時，最容易犯的錯，就是急著拿零散的訪談片段去套解決方案。在 Discover 階段，我們對 19 場訪談進行了高密度的編碼（Coding），那是我們的「事實發散期」。進入 Define（定義階段），團隊的工作是收斂——將跨受訪者的數百個代碼進行親和圖（Affinity Diagram）歸納，理出多個主題（Themes）與洞察（Insights），隨後透過小組深度討論與排序，挑選出最具變革價值的特定問題，轉譯為 HMW（我們該如何）挑戰。以下就是我們從混亂的農村現場，理出的具體收斂軌跡。
@@ -808,6 +874,18 @@
     <p class="callout-content">
       核心問題精準定義（Define）後，設計方向已有了明確的事實基石。在接下來的 <strong>Develop (開發階段)</strong>，四組團隊將聚焦這四個經排序篩選出來的 HMW 挑戰展開頭腦風暴，動手打造能落地驗證的創新解決方案原型！
     </p>
+  </div>
+
+  <!-- Article Pagination Navigation -->
+  <div class="article-navigation">
+    <a href="discover.html" class="nav-card prev">
+      <span class="nav-label">上一篇 (Prev)</span>
+      <span class="nav-title">← Discover 脈絡探索</span>
+    </a>
+    <a href="develop.html" class="nav-card next">
+      <span class="nav-label">下一篇 (Next)</span>
+      <span class="nav-title">Develop 創意共創 ➔</span>
+    </a>
   </div>
 </main>
 

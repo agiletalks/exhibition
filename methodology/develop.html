@@ -578,6 +578,71 @@
       line-height: 1.4;
     }
 
+  
+    /* Back Home & Article Navigation */
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      transition: color 0.3s;
+    }
+    .back-home-link:hover {
+      color: var(--secondary);
+    }
+    .article-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 64px;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+    }
+    .nav-card {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .nav-card.prev {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .nav-card.next {
+      align-items: flex-end;
+      text-align: right;
+    }
+    .nav-card:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 42, 28, 0.04);
+    }
+    .nav-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .nav-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+    .nav-card:hover .nav-title {
+      color: var(--secondary);
+    }
   </style>
 </head>
 <body>
@@ -591,6 +656,7 @@
 </header>
 
 <main>
+  <a href="../index.html#methodology" class="back-home-link">← 返回設計思考指南</a>
   <div class="intro-card">
     <p class="intro-text">
       在 Define（定義）階段，我們成功將複雜的質化訪談編碼收斂，並為四個小組分別確立了極具挑戰性的 HMW（我們該如何）設計問題。然而，定義出好問題只是第一步，隨後而來的 <strong>Develop（發想開發）</strong> 階段，其核心目標是打破常理、拓寬思路。為了防止團隊陷入「直覺式、平庸」的解決方案，本次共學營在發想階段導入了至少兩種獨特的發散技術：跨越台日文化疆界的「哆啦A夢道具連想法」，以及限時高壓的 A4 六格輪流發想。以下是我們在創意的未知水域中，瘋狂發散的實踐紀錄。
@@ -697,6 +763,18 @@
     <p class="callout-content">
       隨著創意方案的收斂與整併完成，四個小組正式進入 <strong>Deliver (遞交階段)</strong>！我們將在下一篇手札中，詳細揭曉各組最終打造出來的具體原型（Prototypes）、驗證過程以及在泰拉學校地之校現場進行的落地實測回饋！
     </p>
+  </div>
+
+  <!-- Article Pagination Navigation -->
+  <div class="article-navigation">
+    <a href="define.html" class="nav-card prev">
+      <span class="nav-label">上一篇 (Prev)</span>
+      <span class="nav-title">← Define 痛點定義</span>
+    </a>
+    <a href="deliver.html" class="nav-card next">
+      <span class="nav-label">下一篇 (Next)</span>
+      <span class="nav-title">Deliver 落地驗證 ➔</span>
+    </a>
   </div>
 </main>
 

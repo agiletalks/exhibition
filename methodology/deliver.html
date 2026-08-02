@@ -488,6 +488,71 @@
       font-style: italic;
       line-height: 1.4;
     }
+  
+    /* Back Home & Article Navigation */
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      transition: color 0.3s;
+    }
+    .back-home-link:hover {
+      color: var(--secondary);
+    }
+    .article-navigation {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 64px;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+    }
+    .nav-card {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .nav-card.prev {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .nav-card.next {
+      align-items: flex-end;
+      text-align: right;
+    }
+    .nav-card:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 42, 28, 0.04);
+    }
+    .nav-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .nav-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+    .nav-card:hover .nav-title {
+      color: var(--secondary);
+    }
   </style>
 </head>
 <body>
@@ -501,6 +566,7 @@
 </header>
 
 <main>
+  <a href="../index.html#methodology" class="back-home-link">← 返回設計思考指南</a>
   <div class="intro-card">
     <p class="intro-text">
       經歷了 Discover (發散探索) 的深度訪談、Define (聚焦定義) 的痛點收斂，以及 Develop (發想開發) 的創意激盪，本屆「泰拉學校—地之校」的跨國共創團隊迎來了最後的終點站——<strong>Deliver (交付落地驗證)</strong>。這一步不只是在紙面上做簡報練習，而是要將實地產出的點子做成低保真或數位原型，在員山老農、南澳青農與佛光大學專家的面前進行面對面測試，驗證方案的可行性。學員們以出色的完整度展現了四組 MVP 設計提案，為地方共創與永續食農注入了新的思維。
@@ -629,6 +695,15 @@
     <p class="callout-content">
       至此，泰拉學校地之校的 Design Thinking 質化研究手札系列圓滿落幕。從第一步的實地訪查，到最終的高感官數位與實體方案交付，跨國青年們實地記錄了「風土與設計」的交會，為共創永續食農的複雜網絡，搭起了一座座充滿溫度的溝通橋樑。
     </p>
+  </div>
+
+  <!-- Article Pagination Navigation -->
+  <div class="article-navigation">
+    <a href="develop.html" class="nav-card prev">
+      <span class="nav-label">上一篇 (Prev)</span>
+      <span class="nav-title">← Develop 創意共創</span>
+    </a>
+    <div style="flex: 1;"></div>
   </div>
 </main>
 
