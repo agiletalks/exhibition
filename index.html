@@ -63,9 +63,9 @@
       zh: {
         brand: "泰拉學校 ｜ 地之校",
         nav: {
-          campaign: "2026成果展",
-          methodology: "核心方法",
-          stories: "風土寫真",
+          methodology: "設計思考",
+          timeline: "學習歷程",
+          quotes: "行動者心聲",
           partners: "合作夥伴",
           next: "下一屆消息"
         },
@@ -106,9 +106,9 @@
       en: {
         brand: "Terra School | Earth",
         nav: {
-          campaign: "2026 Exhibition",
-          methodology: "Methodology",
-          stories: "Stories",
+          methodology: "Design Thinking",
+          timeline: "Learning Journey",
+          quotes: "Actor Voices",
           partners: "Partners",
           next: "Next Intake"
         },
@@ -149,9 +149,9 @@
       ja: {
         brand: "テラ学校 ｜ 地の校",
         nav: {
-          campaign: "2026成果展",
-          methodology: "メソッド",
-          stories: "フォトストーリー",
+          methodology: "デザイン思考",
+          timeline: "学習の旅",
+          quotes: "参加者の声",
           partners: "パートナー",
           next: "次回募集"
         },
@@ -470,9 +470,9 @@ function App() {
               </div>
               
               <nav className="hidden md:flex items-center gap-8 font-semibold text-[#1C2421] text-sm">
-                <a href="#campaign" className="hover:text-[#B35C24] transition-colors">{t.nav.campaign}</a>
                 <a href="#methodology" className="hover:text-[#B35C24] transition-colors">{t.nav.methodology}</a>
-                <a href="#stories" className="hover:text-[#B35C24] transition-colors">{t.nav.stories}</a>
+                <a href="#timeline" className="hover:text-[#B35C24] transition-colors">{t.nav.timeline}</a>
+                <a href="#quotes" className="hover:text-[#B35C24] transition-colors">{t.nav.quotes}</a>
                 <a href="#partners" className="hover:text-[#B35C24] transition-colors">{t.nav.partners}</a>
               </nav>
 
@@ -608,7 +608,7 @@ function App() {
           </section>
           
           {/* Timeline Section */}
-          <section className="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full">
+          <section id="timeline" className="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-2xl md:text-4xl font-extrabold text-[#0F2A1C]">{t.timeline.title}</h2>
@@ -653,7 +653,7 @@ function App() {
           
 
           {/* Quote Wall (Student Stories) */}
-          <section className="max-w-7xl mx-auto px-6 py-16 w-full">
+          <section id="quotes" className="max-w-7xl mx-auto px-6 py-16 w-full">
             <div className="text-center mb-16">
               <span className="text-[#B35C24] font-bold text-xs uppercase tracking-widest">Reflections</span>
               <h2 className="text-2xl md:text-4xl font-extrabold text-[#0F2A1C] mt-2">{t.quotes.title}</h2>
