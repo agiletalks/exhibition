@@ -440,20 +440,31 @@
     }
 
   
-    /* Back Home & Article Navigation */
-    .back-home-link {
-      display: inline-flex;
+    /* Breadcrumb & Article Navigation */
+    .breadcrumb {
+      display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 8px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       margin-bottom: 32px;
+      color: var(--text-muted);
+    }
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
       transition: color 0.3s;
     }
-    .back-home-link:hover {
+    .breadcrumb a:hover {
       color: var(--secondary);
+    }
+    .breadcrumb .separator {
+      color: var(--border);
+      font-weight: 400;
+    }
+    .breadcrumb .current {
+      color: var(--primary);
     }
     .article-navigation {
       display: flex;
@@ -510,14 +521,19 @@
 
 <header>
   <div class="header-content">
-    <span class="badge">Discover 篇 (探索階段)</span>
+    <span class="badge">Discover 脈絡探索</span>
     <h1>城鄉共創與永續食農的實地訪查手札</h1>
-    <p class="subtitle">泰拉學校 地之校 Design Thinking 質化研究手札 | 第一篇</p>
-  </div>
+    </div>
 </header>
 
 <main>
-  <a href="../index.html#methodology" class="back-home-link">← 返回設計思考指南</a>
+  <div class="breadcrumb">
+    <a href="../index.html">成果展首頁</a>
+    <span class="separator">/</span>
+    <a href="../index.html#methodology">設計思考</a>
+    <span class="separator">/</span>
+    <span class="current">Discover 脈絡探索</span>
+  </div>
   <div class="intro-card">
     <p class="intro-text">
       面對複雜的在地情境，若想探索出真正可行的解決方案，最忌諱坐在辦公室裡讀二手報告。由 1221 未來教育發展協會發起的首屆「泰拉學校—地之校」，集結日本早稻田大學與國立清華大學立德領導人才培育計畫的跨國學生團隊，直接把大家拉到實踐現場——橫跨宜蘭員山、南澳與礁溪佛光大學等地。我們透過實地的體驗觀察與多角度的關係人訪談，採集最扎實的第一手質化研究資料。光是看簡報是不會產生洞察的，唯有親身投入，才能看清城鄉共創與永續食農的真實樣貌。

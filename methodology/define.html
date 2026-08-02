@@ -470,20 +470,31 @@
     }
 
   
-    /* Back Home & Article Navigation */
-    .back-home-link {
-      display: inline-flex;
+    /* Breadcrumb & Article Navigation */
+    .breadcrumb {
+      display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 8px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       margin-bottom: 32px;
+      color: var(--text-muted);
+    }
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
       transition: color 0.3s;
     }
-    .back-home-link:hover {
+    .breadcrumb a:hover {
       color: var(--secondary);
+    }
+    .breadcrumb .separator {
+      color: var(--border);
+      font-weight: 400;
+    }
+    .breadcrumb .current {
+      color: var(--primary);
     }
     .article-navigation {
       display: flex;
@@ -540,14 +551,19 @@
 
 <header>
   <div class="header-content">
-    <span class="badge">Define 篇 (收斂定義階段)</span>
+    <span class="badge">Define 痛點定義</span>
     <h1>從混亂事實中理出頭緒：跨關係人的主題、洞察與 HMW 轉譯</h1>
-    <p class="subtitle">泰拉學校 地之校 Design Thinking 質化研究手札 | 第二篇</p>
-  </div>
+    </div>
 </header>
 
 <main>
-  <a href="../index.html#methodology" class="back-home-link">← 返回設計思考指南</a>
+  <div class="breadcrumb">
+    <a href="../index.html">成果展首頁</a>
+    <span class="separator">/</span>
+    <a href="../index.html#methodology">設計思考</a>
+    <span class="separator">/</span>
+    <span class="current">Define 痛點定義</span>
+  </div>
   <div class="intro-card">
     <p class="intro-text">
       面對複雜的社會與產業情境，引入設計思考作為探索解決方案的方法時，最容易犯的錯，就是急著拿零散的訪談片段去套解決方案。在 Discover 階段，我們對 19 場訪談進行了高密度的編碼（Coding），那是我們的「事實發散期」。進入 Define（定義階段），團隊的工作是收斂——將跨受訪者的數百個代碼進行親和圖（Affinity Diagram）歸納，理出多個主題（Themes）與洞察（Insights），隨後透過小組深度討論與排序，挑選出最具變革價值的特定問題，轉譯為 HMW（我們該如何）挑戰。以下就是我們從混亂的農村現場，理出的具體收斂軌跡。

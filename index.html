@@ -470,7 +470,29 @@ function App() {
               </div>
               
               <nav className="hidden md:flex items-center gap-8 font-semibold text-[#1C2421] text-sm">
-                <a href="#methodology" className="hover:text-[#B35C24] transition-colors">{t.nav.methodology}</a>
+                {/* Design Thinking with Dynamic Dropdown */}
+                <div className="relative group py-2">
+                  <a href="#methodology" className="hover:text-[#B35C24] transition-colors flex items-center gap-1 cursor-pointer">
+                    {t.nav.methodology}
+                    <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                  
+                  {/* Dropdown Menu */}
+                  <div className="absolute left-0 mt-2 w-56 bg-white border border-stone-200/80 rounded-2xl shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                    {t.methodology.stages.map((stage, idx) => (
+                      <a 
+                        key={idx} 
+                        href={stage.link} 
+                        className="block px-4 py-2.5 text-xs text-stone-600 hover:text-[#B35C24] hover:bg-stone-50 transition-colors font-bold"
+                      >
+                        0{idx + 1}. {stage.title} ({stage.eng.charAt(0) + stage.eng.slice(1).toLowerCase()})
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
                 <a href="#timeline" className="hover:text-[#B35C24] transition-colors">{t.nav.timeline}</a>
                 <a href="#quotes" className="hover:text-[#B35C24] transition-colors">{t.nav.quotes}</a>
                 <a href="#partners" className="hover:text-[#B35C24] transition-colors">{t.nav.partners}</a>
