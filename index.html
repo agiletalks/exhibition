@@ -492,25 +492,63 @@ function App() {
 
           {/* Hero Section */}
           <section className="max-w-7xl mx-auto px-6 pt-12 pb-16 w-full">
-            <div className="bg-gradient-to-br from-[#0F2A1C] to-[#1D3D2C] rounded-3xl p-8 md:p-16 text-white text-center shadow-xl relative overflow-hidden">
-              <div className="relative z-10 max-w-3xl mx-auto">
-                <span className="bg-[#B35C24] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 inline-block">Waseda × NTHU Co-creation</span>
-                <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight">{t.hero.title}</h1>
-                <p className="text-orange-200 text-lg md:text-xl font-medium mb-6">{t.hero.subtitle}</p>
-                <p className="text-stone-300 text-sm md:text-base leading-relaxed mb-8">{t.hero.desc}</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="#campaign" className="bg-[#B35C24] hover:bg-[#a04e1c] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-lg transition-all transform hover:-translate-y-0.5">{t.hero.ctaShowcase}</a>
-                  <button 
+            <div className="bg-gradient-to-br from-[#0F2A1C] to-[#1D3D2C] rounded-3xl p-8 md:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden">
+              {/* Decorative background shape */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-700/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+              
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                {/* Left Side: Content */}
+                <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
+                  <span className="bg-[#B35C24] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 inline-block">Waseda × NTHU Co-creation</span>
+                  <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight">{t.hero.title}</h1>
+                  <p className="text-orange-200 text-lg md:text-xl font-medium mb-6">{t.hero.subtitle}</p>
+                  <p className="text-stone-300 text-sm md:text-base leading-relaxed mb-8">{t.hero.desc}</p>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+                    <a href="#campaign" className="bg-[#B35C24] hover:bg-[#a04e1c] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-lg transition-all transform hover:-translate-y-0.5 text-center">{t.hero.ctaShowcase}</a>
+                  </div>
+                </div>
+
+                {/* Right Side: Video Thumbnail Card */}
+                <div className="lg:col-span-5 flex justify-center w-full">
+                  <div 
                     onClick={() => setActiveVideo({ video: "https://www.youtube.com/embed/Qaa25f1oFNw" })} 
-                    className="border border-white/30 hover:border-white bg-white/5 hover:bg-white/10 px-8 py-3.5 rounded-full font-bold text-sm transition-all cursor-pointer"
+                    className="relative w-full max-w-md aspect-video lg:aspect-square xl:aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-emerald-950/40"
                   >
-                    {t.hero.ctaVideo}
-                  </button>
+                    {/* Thumbnail Image */}
+                    <img 
+                      src="assets/photos/day5/graduation_certificates_group_photo.jpg" 
+                      alt="泰拉學校活動紀錄封面" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20 group-hover:from-black/95 transition-all duration-300"></div>
+                    
+                    {/* Play Button Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-[#B35C24] hover:bg-[#a04e1c] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all transform group-hover:scale-110 duration-300 group-hover:bg-[#B35C24]/90 relative">
+                        {/* Pulse effect */}
+                        <div className="absolute inset-0 rounded-full bg-[#B35C24] animate-ping opacity-40 group-hover:opacity-60"></div>
+                        <svg className="w-8 h-8 fill-current ml-1 relative z-10" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Text Overlay at Bottom */}
+                    <div className="absolute bottom-5 left-5 right-5 text-left pointer-events-none">
+                      <span className="text-[#B35C24] font-bold text-xs uppercase tracking-widest block mb-1">Documentary Video</span>
+                      <h3 className="text-white text-lg font-bold leading-snug drop-shadow-sm">{t.hero.ctaVideo}</h3>
+                      <p className="text-stone-300 text-xs mt-1 opacity-95">
+                        {language === 'zh' ? '點擊播放 10 分鐘精彩活動全紀錄' : (language === 'ja' ? 'クリックして10分間の記録映像を再生' : 'Click to watch 10 min recap documentary')}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-
+          
           {/* Unified Map & Methodology Section */}
           <section id="methodology" className="max-w-7xl mx-auto px-6 py-16 w-full">
             <div className="text-center mb-12">
