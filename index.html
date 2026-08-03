@@ -340,6 +340,7 @@
     <!-- Timeline Section -->
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-10">
@@ -366,12 +367,12 @@
           </button>
         </div>
 
-        <!-- Dynamic Content Display -->
-        <div id="day-content-container" class="transition-all duration-300">
+        <!-- Dynamic Content Display (Stacked Card Container) -->
+        <div id="day-content-container" class="relative w-full h-[680px] sm:h-[580px] md:h-[520px] lg:h-[420px] transition-all duration-300">
           <!-- Day 1 Pane -->
-          <div id="day-pane-1" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane">
+          <div id="day-pane-1" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-30 scale-100 rotate-0 translate-x-0 translate-y-0 opacity-100 pointer-events-auto">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
+             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 01</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -382,7 +383,7 @@
                  </p>
                </div>
                
-               <div class="flex items-center justify-between border-t border-stone-100 mt-8 pt-5">
+               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
                  <button class="text-xs font-bold text-stone-300 cursor-not-allowed flex items-center gap-1.5" disabled>
                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                    <span>PREVIOUS</span>
@@ -412,9 +413,9 @@
              </div>
           </div>
           <!-- Day 2 Pane -->
-          <div id="day-pane-2" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
+          <div id="day-pane-2" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-20 scale-[0.98] rotate-[1.5deg] translate-x-2.5 translate-y-2.5 opacity-90 pointer-events-none">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
+             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 02</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -425,7 +426,7 @@
                  </p>
                </div>
                
-               <div class="flex items-center justify-between border-t border-stone-100 mt-8 pt-5">
+               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
                  <button onclick="switchDay(1)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
                    <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                    <span>PREVIOUS</span>
@@ -455,9 +456,9 @@
              </div>
           </div>
           <!-- Day 3 Pane -->
-          <div id="day-pane-3" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
+          <div id="day-pane-3" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-10 scale-[0.96] rotate-[3deg] translate-x-5 translate-y-5 opacity-80 pointer-events-none">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
+             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 03</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -468,7 +469,7 @@
                  </p>
                </div>
                
-               <div class="flex items-center justify-between border-t border-stone-100 mt-8 pt-5">
+               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
                  <button onclick="switchDay(2)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
                    <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                    <span>PREVIOUS</span>
@@ -498,9 +499,9 @@
              </div>
           </div>
           <!-- Day 4 Pane -->
-          <div id="day-pane-4" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
+          <div id="day-pane-4" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
+             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 04</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -511,7 +512,7 @@
                  </p>
                </div>
                
-               <div class="flex items-center justify-between border-t border-stone-100 mt-8 pt-5">
+               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
                  <button onclick="switchDay(3)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
                    <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                    <span>PREVIOUS</span>
@@ -541,9 +542,9 @@
              </div>
           </div>
           <!-- Day 5 Pane -->
-          <div id="day-pane-5" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
+          <div id="day-pane-5" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
+             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 05</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -554,7 +555,7 @@
                  </p>
                </div>
                
-               <div class="flex items-center justify-between border-t border-stone-100 mt-8 pt-5">
+               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
                  <button onclick="switchDay(4)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
                    <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                    <span>PREVIOUS</span>
@@ -1124,6 +1125,7 @@
   <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
   <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeImage()">
     <button 
       class="absolute top-4 right-4 z-[110] bg-black/60 hover:bg-[#B35C24] text-white p-2.5 rounded-full transition-colors shadow-lg"
@@ -1284,22 +1286,40 @@
     function switchDay(dayNum) {
       currentActiveDay = dayNum;
       
-      // Hide all day panes and reset tab buttons
+      // Stacking class configurations
+      const pos1Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-30 scale-100 rotate-0 translate-x-0 translate-y-0 opacity-100 pointer-events-auto";
+      const pos2Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-20 scale-[0.98] rotate-[1.5deg] translate-x-2.5 translate-y-2.5 opacity-90 pointer-events-none";
+      const pos3Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-10 scale-[0.96] rotate-[3deg] translate-x-5 translate-y-5 opacity-80 pointer-events-none";
+      const posHiddenClass = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none";
+
+      const next1 = (dayNum % 5) + 1;
+      const next2 = ((dayNum + 1) % 5) + 1;
+
       for (let d = 1; d <= 5; d++) {
         const pane = document.getElementById(`day-pane-${d}`);
         const btn = document.getElementById(`tab-btn-${d}`);
-        if (pane) pane.classList.add('hidden');
+        
+        // Style tabs
         if (btn) {
-          btn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800";
+          if (d === dayNum) {
+            btn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 shadow-sm bg-white text-[#B35C24]";
+          } else {
+            btn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800";
+          }
         }
-      }
 
-      // Show selected day pane and style active tab button
-      const activePane = document.getElementById(`day-pane-${dayNum}`);
-      const activeBtn = document.getElementById(`tab-btn-${dayNum}`);
-      if (activePane) activePane.classList.remove('hidden');
-      if (activeBtn) {
-        activeBtn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 shadow-sm bg-white text-[#B35C24]";
+        // Apply stacking classes to panes
+        if (pane) {
+          if (d === dayNum) {
+            pane.className = pos1Class;
+          } else if (d === next1) {
+            pane.className = pos2Class;
+          } else if (d === next2) {
+            pane.className = pos3Class;
+          } else {
+            pane.className = posHiddenClass;
+          }
+        }
       }
     }
 
@@ -1338,6 +1358,7 @@
       updateLightboxContent();
     }
 
+    // Handle Keyboard controls
     function closeImage() {
       const modal = document.getElementById('image-modal');
       const img = document.getElementById('modal-image');
