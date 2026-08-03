@@ -342,20 +342,22 @@
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-2xl md:text-4xl font-extrabold text-[#0F2A1C]">5-Day Field Learning Journey</h2>
           <p class="text-stone-500 text-sm md:text-base mt-2">Our field practice footprint in Yuanshan, Nanao, and Fo Guang University</p>
         </div>
 
-        <!-- Cards Grid Container -->
-        <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <!-- Cards Alternating List Container -->
+        <div class="flex flex-col gap-10 max-w-5xl mx-auto">
           <!-- Day 1 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(1, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(1, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -364,24 +366,27 @@
                     <span>9 Photos</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  Click to open album
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
                 Day 1 | NCCU International Forum: Encounter of Taiwan-Japan Youth & Launch of Transnational Teams
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 Taiwanese and Japanese youth gathered at National Chengchi University to start their five-day journey from the "Urban-Rural Co-creation and Sustainable Agri-food" forum. Through presentations by practitioners from various fields, they learned about the diverse possibilities of agriculture, locality, and technology. In the evening, they traveled to Nanao, where they formed transnational teams through icebreakers and open discussions, selected their exploration topics, and set the stage for their upcoming field actions.
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              Click to open album
-            </div>
           </div>
           <!-- Day 2 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(2, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(2, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -390,24 +395,27 @@
                     <span>15 Photos</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  Click to open album
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
                 Day 2 | Into Nanao Fields: Native Garden Meditation & Sugarcane Harvesting
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 The morning began with meditation in the native botanical garden, practicing slowing down and reconnecting with the land through the five senses. Next, they visited A-Cong's organic farm to harvest sugarcane, squeeze juice, and craft bamboo cups, while learning about the region through indigenous cuisine and culture. In the afternoon, they utilized AI for desk research, organizing market data and designing interview outlines, gradually transforming their experience into framed problem definitions.
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              Click to open album
-            </div>
           </div>
           <!-- Day 3 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(3, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(3, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -416,24 +424,27 @@
                     <span>16 Photos</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  Click to open album
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
                 Day 3 | From Shuiyue Farm to Slow Island Life: Lotus Seed Harvesting & Rice Baking Experience
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 In the five-color paddy fields, lotus ponds, and black soybean fields of Shuiyue Farm, students learned about crops and natural farming through hands-on labor, as well as making rice balls and tasting lotus seed soup together. In the afternoon, they visited Slow Island Life to interview organic shop operators, inspect paddy fields, and experience straw weaving, understanding how agriculture connects with lifestyle choices, local management, and community relationships.
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              Click to open album
-            </div>
           </div>
           <!-- Day 4 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(4, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(4, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -442,24 +453,27 @@
                     <span>15 Photos</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  Click to open album
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
                 Day 4 | "Fishing" in Shengou: Deep Interview on Half-Farming, Half-X
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 Early in the morning, they entered the Shengou farming area, following ecological workers to conduct fish surveys in the rice paddies, understanding through observation and operation that farmlands are also critical ecological habitats. Next, they interviewed various "Half-Farming, Half-X" practitioners—including ecologists, engineers, and bakers—and hand-made rice-based baked goods. In the evening, each team used AI to organize interview materials, extract insights, and develop solutions.
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              Click to open album
-            </div>
           </div>
           <!-- Day 5 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(5, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(5, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -468,17 +482,20 @@
                     <span>16 Photos</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  Click to open album
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
                 Day 5 | Planting Promises at Fo Guang University: Sustainable Tree Planting & Project Presentation
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 On the final day, a tree-planting activity symbolized heritage and commitment, leaving a lasting imprint of this five-day journey. Each team integrated field observations, interview data, and design thinking processes to present their project results and deliver presentations, receiving evaluations and feedback from experts. The graduation certificates represented not just the completion of the program, but an invitation for each participant to carry this experience back to their lives and continue practicing.
               </p>
-            </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              Click to open album
             </div>
           </div>
         </div>
@@ -1021,6 +1038,8 @@
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
   <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeImage()">
     <button 
       class="absolute top-4 right-4 z-[110] bg-black/60 hover:bg-[#B35C24] text-white p-2.5 rounded-full transition-colors shadow-lg"
@@ -1198,6 +1217,7 @@
       counter.innerText = `${currentActivePhotoIndex + 1} / ${photos.length}`;
     }
 
+    // Previous Image
     function prevImage(e) {
       if (e) e.stopPropagation();
       const photos = galleryData[currentActiveDay];
@@ -1205,6 +1225,7 @@
       updateLightboxContent();
     }
 
+    // Next Image
     function nextImage(e) {
       if (e) e.stopPropagation();
       const photos = galleryData[currentActiveDay];
@@ -1212,7 +1233,7 @@
       updateLightboxContent();
     }
 
-    // Handle Keyboard controls
+    // Close Lightbox
     function closeImage() {
       const modal = document.getElementById('image-modal');
       const img = document.getElementById('modal-image');

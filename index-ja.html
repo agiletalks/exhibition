@@ -342,20 +342,22 @@
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-2xl md:text-4xl font-extrabold text-[#0F2A1C]">5日間のフィールド学習の旅</h2>
           <p class="text-stone-500 text-sm md:text-base mt-2">宜蘭員山、南澳、そして佛光大学における実地実践の軌跡</p>
         </div>
 
-        <!-- Cards Grid Container -->
-        <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <!-- Cards Alternating List Container -->
+        <div class="flex flex-col gap-10 max-w-5xl mx-auto">
           <!-- Day 1 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(1, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(1, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -364,24 +366,27 @@
                     <span>9枚の写真</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  クリックしてアルバムを開く
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
-                Day 1｜政大国際フォーラム：台日青年の出会いとグローバルチームの始動
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
+                Day 1 | 政大国際フォーラム：台日青年の出会いとグローバルチームの始動
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 台日の青年が政治大学に集まり、「都市と農村の共創と持続可能な食農」フォーラムから5日間の旅をスタートしました。多様な分野の実践者による共有を通じて、農業、地域、テクノロジーの多面的な可能性を学びました。夕方には南澳へ移動し、アイスブレイクとオープンディスカッションを経て国際チームを結成、探究するテーマを決定し、翌日からのフィールドワークへの幕を開けました。
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              クリックしてアルバムを開く
-            </div>
           </div>
           <!-- Day 2 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(2, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(2, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -390,24 +395,27 @@
                     <span>15枚の写真</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  クリックしてアルバムを開く
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
-                Day 2｜南澳のフィールドへ：原生園での静座とサトウキビ収穫
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
+                Day 2 | 南澳のフィールドへ：原生園での静座とサトウキビ収穫
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 早朝、原生植物園での静座から始まり、歩みを遅めて五感で土地を再認識する練習をしました。その後、阿聰自然田を訪れ、サトウキビの収穫、搾汁、竹カップの製作を体験し、先住民の料理と文化から地域への理解を深めました。午後にはAIを活用してデスクトップリサーチを行い、市場データを整理し、インタビューの骨子を設計することで、実体験を課題探索へと昇華させていきました。
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              クリックしてアルバムを開く
-            </div>
           </div>
           <!-- Day 3 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(3, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(3, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -416,24 +424,27 @@
                     <span>16枚の写真</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  クリックしてアルバムを開く
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
-                Day 3｜水月農園からスローアイランドライフへ：蓮の実収穫と米食ベーキング体験
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
+                Day 3 | 水月農園からスローアイランドライフへ：蓮の実収穫と米食ベーキング体験
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 水月農園の五色田、蓮の池、黒大豆畑で、学生たちは実際の農作業を通じて作物と自然農法を学び、おにぎりを作り、蓮の実のスープを味わいました。午後にはスローアイランドライフを訪れ、オーガニックショップの経営者にインタビューを行い、田んぼを歩いて稲作を調査し、藁編みを体験することで、農業がどのようにライフスタイルの選択、地域経営、長距離のコミュニケーションに結びついているかを理解しました。
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              クリックしてアルバムを開く
-            </div>
           </div>
           <!-- Day 4 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(4, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(4, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -442,24 +453,27 @@
                     <span>15枚の写真</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  クリックしてアルバムを開く
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
-                Day 4｜深溝で「調」魚：半農半Xのディープインタビュー
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
+                Day 4 | 深溝で「調」魚：半農半Xのディープインタビュー
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 早朝、深溝の田んぼに入り、エコロジー実践者と共に水田の魚類調査を行い、観察と作業を通じて農地が生態系の重要な生息地でもあることを学びました。その後、生態学者、エンジニア、ベーカリー従事者など、多様なスタイルの「半農半X」実践者たちにインタビューを行い、米粉パン作りを体験しました。夜には、各チームがAIを利用してインタビュー素材を整理し、洞察を抽出してソリューション開発を進めました。
               </p>
             </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              クリックしてアルバムを開く
-            </div>
           </div>
           <!-- Day 5 Card -->
-          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
-            <div>
-              <!-- Polaroid Cover -->
-              <div onclick="openLightbox(5, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <!-- Photo Column -->
+            <div class="w-full lg:w-5/12 flex justify-center">
+              <div onclick="openLightbox(5, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
                   <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <!-- Floating Photo Count Badge -->
@@ -468,17 +482,20 @@
                     <span>16枚の写真</span>
                   </div>
                 </div>
+                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+                  クリックしてアルバムを開く
+                </div>
               </div>
-              
-              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
-                Day 5｜佛光大学での約束：持続可能な植樹とプロジェクト成果発表
+            </div>
+            
+            <!-- Text Column -->
+            <div class="w-full lg:w-7/12">
+              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
+                Day 5 | 佛光大学での約束：持続可能な植樹とプロジェクト成果発表
               </h3>
-              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
                 最終日は、継承と約束の象徴として植樹を行い、5日間の旅の終わりなき足跡を残しました。各チームはフィールド調査の観察、インタビュー資料、空間認識プロセスを統合し、プロジェクト成果を発表、専門家からの評価とアドバイスを受けました。修了証書は単なるプログラムの修了を意味するだけでなく、参加者一人ひとりがこの経験を持ち帰り、日常生活の中で実践し続けることへの招待でもあります。
               </p>
-            </div>
-            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-              クリックしてアルバムを開く
             </div>
           </div>
         </div>
@@ -1024,6 +1041,8 @@
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
   <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeImage()">
     <button 
       class="absolute top-4 right-4 z-[110] bg-black/60 hover:bg-[#B35C24] text-white p-2.5 rounded-full transition-colors shadow-lg"
@@ -1201,6 +1220,7 @@
       counter.innerText = `${currentActivePhotoIndex + 1} / ${photos.length}`;
     }
 
+    // Previous Image
     function prevImage(e) {
       if (e) e.stopPropagation();
       const photos = galleryData[currentActiveDay];
@@ -1208,6 +1228,7 @@
       updateLightboxContent();
     }
 
+    // Next Image
     function nextImage(e) {
       if (e) e.stopPropagation();
       const photos = galleryData[currentActiveDay];
@@ -1215,7 +1236,7 @@
       updateLightboxContent();
     }
 
-    // Handle Keyboard controls
+    // Close Lightbox
     function closeImage() {
       const modal = document.getElementById('image-modal');
       const img = document.getElementById('modal-image');
