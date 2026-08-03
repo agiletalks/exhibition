@@ -341,248 +341,145 @@
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
           <h2 class="text-2xl md:text-4xl font-extrabold text-[#0F2A1C]">5日間のフィールド学習の旅</h2>
           <p class="text-stone-500 text-sm md:text-base mt-2">宜蘭員山、南澳、そして佛光大学における実地実践の軌跡</p>
         </div>
 
-        <!-- Day Selector Tabs -->
-        <div class="bg-stone-200/50 p-1.5 rounded-3xl flex flex-wrap gap-1 max-w-xl mx-auto mb-12 shadow-inner border border-stone-200/20">
-          <button onclick="switchDay(1)" id="tab-btn-1" class="flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 shadow-sm bg-white text-[#B35C24]">
-            Day 1
-          </button>
-          <button onclick="switchDay(2)" id="tab-btn-2" class="flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800">
-            Day 2
-          </button>
-          <button onclick="switchDay(3)" id="tab-btn-3" class="flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800">
-            Day 3
-          </button>
-          <button onclick="switchDay(4)" id="tab-btn-4" class="flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800">
-            Day 4
-          </button>
-          <button onclick="switchDay(5)" id="tab-btn-5" class="flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800">
-            Day 5
-          </button>
-        </div>
-
-        <!-- Dynamic Content Display (Stacked Card Container) -->
-        <div id="day-content-container" class="relative w-full h-[680px] sm:h-[580px] md:h-[520px] lg:h-[420px] transition-all duration-300">
-          <!-- Day 1 Pane -->
-          <div id="day-pane-1" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-30 scale-100 rotate-0 translate-x-0 translate-y-0 opacity-100 pointer-events-auto">
-             <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
-               <div>
-                 <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 01</div>
-                 <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
-                   Day 1｜政大国際フォーラム：台日青年の出会いとグローバルチームの始動
-                 </h3>
-                 <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   台日の青年が政治大学に集まり、「都市と農村の共創と持続可能な食農」フォーラムから5日間の旅をスタートしました。多様な分野の実践者による共有を通じて、農業、地域、テクノロジーの多面的な可能性を学びました。夕方には南澳へ移動し、アイスブレイクとオープンディスカッションを経て国際チームを結成、探究するテーマを決定し、翌日からのフィールドワークへの幕を開けました。
-                 </p>
-               </div>
-               
-               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
-                 <button class="text-xs font-bold text-stone-300 cursor-not-allowed flex items-center gap-1.5" disabled>
-                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                   <span>前の日へ</span>
-                 </button>
-                 <button onclick="switchDay(2)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <span>次の日へ</span>
-                   <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                 </button>
-               </div>
-             </div>
-
-             <!-- Right: Single Polaroid Card -->
-             <div class="lg:col-span-5 flex justify-center items-center">
-               <div onclick="openLightbox(1, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
-                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
-                   <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                   <!-- Floating Photo Count Badge -->
-                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                     <span>9枚の写真</span>
-                   </div>
-                 </div>
-                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
-                   クリックしてアルバムを開く
-                 </div>
-               </div>
-             </div>
+        <!-- Cards Grid Container -->
+        <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+          <!-- Day 1 Card -->
+          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
+            <div>
+              <!-- Polaroid Cover -->
+              <div onclick="openLightbox(1, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <!-- Floating Photo Count Badge -->
+                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>9枚の写真</span>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+                Day 1｜政大国際フォーラム：台日青年の出会いとグローバルチームの始動
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+                台日の青年が政治大学に集まり、「都市と農村の共創と持続可能な食農」フォーラムから5日間の旅をスタートしました。多様な分野の実践者による共有を通じて、農業、地域、テクノロジーの多面的な可能性を学びました。夕方には南澳へ移動し、アイスブレイクとオープンディスカッションを経て国際チームを結成、探究するテーマを決定し、翌日からのフィールドワークへの幕を開けました。
+              </p>
+            </div>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              クリックしてアルバムを開く
+            </div>
           </div>
-          <!-- Day 2 Pane -->
-          <div id="day-pane-2" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-20 scale-[0.98] rotate-[1.5deg] translate-x-2.5 translate-y-2.5 opacity-90 pointer-events-none">
-             <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
-               <div>
-                 <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 02</div>
-                 <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
-                   Day 2｜南澳のフィールドへ：原生園での静座とサトウキビ収穫
-                 </h3>
-                 <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   早朝、原生植物園での静座から始まり、歩みを遅めて五感で土地を再認識する練習をしました。その後、阿聰自然田を訪れ、サトウキビの収穫、搾汁、竹カップの製作を体験し、先住民の料理と文化から地域への理解を深めました。午後にはAIを活用してデスクトップリサーチを行い、市場データを整理し、インタビューの骨子を設計することで、実体験を課題探索へと昇華させていきました。
-                 </p>
-               </div>
-               
-               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
-                 <button onclick="switchDay(1)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                   <span>前の日へ</span>
-                 </button>
-                 <button onclick="switchDay(3)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <span>次の日へ</span>
-                   <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                 </button>
-               </div>
-             </div>
-
-             <!-- Right: Single Polaroid Card -->
-             <div class="lg:col-span-5 flex justify-center items-center">
-               <div onclick="openLightbox(2, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
-                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
-                   <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                   <!-- Floating Photo Count Badge -->
-                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                     <span>15枚の写真</span>
-                   </div>
-                 </div>
-                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
-                   クリックしてアルバムを開く
-                 </div>
-               </div>
-             </div>
+          <!-- Day 2 Card -->
+          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
+            <div>
+              <!-- Polaroid Cover -->
+              <div onclick="openLightbox(2, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <!-- Floating Photo Count Badge -->
+                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>15枚の写真</span>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+                Day 2｜南澳のフィールドへ：原生園での静座とサトウキビ収穫
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+                早朝、原生植物園での静座から始まり、歩みを遅めて五感で土地を再認識する練習をしました。その後、阿聰自然田を訪れ、サトウキビの収穫、搾汁、竹カップの製作を体験し、先住民の料理と文化から地域への理解を深めました。午後にはAIを活用してデスクトップリサーチを行い、市場データを整理し、インタビューの骨子を設計することで、実体験を課題探索へと昇華させていきました。
+              </p>
+            </div>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              クリックしてアルバムを開く
+            </div>
           </div>
-          <!-- Day 3 Pane -->
-          <div id="day-pane-3" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-10 scale-[0.96] rotate-[3deg] translate-x-5 translate-y-5 opacity-80 pointer-events-none">
-             <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
-               <div>
-                 <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 03</div>
-                 <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
-                   Day 3｜水月農園からスローアイランドライフへ：蓮の実収穫と米食ベーキング体験
-                 </h3>
-                 <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   水月農園の五色田、蓮の池、黒大豆畑で、学生たちは実際の農作業を通じて作物と自然農法を学び、おにぎりを作り、蓮の実のスープを味わいました。午後にはスローアイランドライフを訪れ、オーガニックショップの経営者にインタビューを行い、田んぼを歩いて稲作を調査し、藁編みを体験することで、農業がどのようにライフスタイルの選択、地域経営、そしてコミュニティの繋がりに結びついているかを理解しました。
-                 </p>
-               </div>
-               
-               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
-                 <button onclick="switchDay(2)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                   <span>前の日へ</span>
-                 </button>
-                 <button onclick="switchDay(4)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <span>次の日へ</span>
-                   <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                 </button>
-               </div>
-             </div>
-
-             <!-- Right: Single Polaroid Card -->
-             <div class="lg:col-span-5 flex justify-center items-center">
-               <div onclick="openLightbox(3, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
-                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
-                   <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                   <!-- Floating Photo Count Badge -->
-                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                     <span>16枚の写真</span>
-                   </div>
-                 </div>
-                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
-                   クリックしてアルバムを開く
-                 </div>
-               </div>
-             </div>
+          <!-- Day 3 Card -->
+          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
+            <div>
+              <!-- Polaroid Cover -->
+              <div onclick="openLightbox(3, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <!-- Floating Photo Count Badge -->
+                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>16枚の写真</span>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+                Day 3｜水月農園からスローアイランドライフへ：蓮の実収穫と米食ベーキング体験
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+                水月農園の五色田、蓮の池、黒大豆畑で、学生たちは実際の農作業を通じて作物と自然農法を学び、おにぎりを作り、蓮の実のスープを味わいました。午後にはスローアイランドライフを訪れ、オーガニックショップの経営者にインタビューを行い、田んぼを歩いて稲作を調査し、藁編みを体験することで、農業がどのようにライフスタイルの選択、地域経営、長距離のコミュニケーションに結びついているかを理解しました。
+              </p>
+            </div>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              クリックしてアルバムを開く
+            </div>
           </div>
-          <!-- Day 4 Pane -->
-          <div id="day-pane-4" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none">
-             <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
-               <div>
-                 <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 04</div>
-                 <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
-                   Day 4｜深溝で「調」魚：半農半Xのディープインタビュー
-                 </h3>
-                 <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   早朝、深溝の田んぼに入り、エコロジー実践者と共に水田の魚類調査を行い、観察と作業を通じて農地が生態系の重要な生息地でもあることを学びました。その後、生態学者、エンジニア、ベーカリー従事者など、多様なスタイルの「半農半X」実践者たちにインタビューを行い、米粉パン作りを体験しました。夜には、各チームがAIを利用してインタビュー素材を整理し、洞察を抽出してソリューション開発を進めました。
-                 </p>
-               </div>
-               
-               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
-                 <button onclick="switchDay(3)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                   <span>前の日へ</span>
-                 </button>
-                 <button onclick="switchDay(5)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <span>次の日へ</span>
-                   <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                 </button>
-               </div>
-             </div>
-
-             <!-- Right: Single Polaroid Card -->
-             <div class="lg:col-span-5 flex justify-center items-center">
-               <div onclick="openLightbox(4, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
-                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
-                   <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                   <!-- Floating Photo Count Badge -->
-                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                     <span>15枚の写真</span>
-                   </div>
-                 </div>
-                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
-                   クリックしてアルバムを開く
-                 </div>
-               </div>
-             </div>
+          <!-- Day 4 Card -->
+          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
+            <div>
+              <!-- Polaroid Cover -->
+              <div onclick="openLightbox(4, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <!-- Floating Photo Count Badge -->
+                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>15枚の写真</span>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+                Day 4｜深溝で「調」魚：半農半Xのディープインタビュー
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+                早朝、深溝の田んぼに入り、エコロジー実践者と共に水田の魚類調査を行い、観察と作業を通じて農地が生態系の重要な生息地でもあることを学びました。その後、生態学者、エンジニア、ベーカリー従事者など、多様なスタイルの「半農半X」実践者たちにインタビューを行い、米粉パン作りを体験しました。夜には、各チームがAIを利用してインタビュー素材を整理し、洞察を抽出してソリューション開発を進めました。
+              </p>
+            </div>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              クリックしてアルバムを開く
+            </div>
           </div>
-          <!-- Day 5 Pane -->
-          <div id="day-pane-5" class="absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none">
-             <!-- Left: Information Card -->
-             <div class="lg:col-span-7 flex flex-col justify-between h-full min-h-[250px] sm:min-h-[280px]">
-               <div>
-                 <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 05</div>
-                 <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
-                   Day 5｜佛光大学での約束：持続可能な植樹とプロジェクト成果發表
-                 </h3>
-                 <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   最終日は、継承と約束の象徴として植樹を行い、5日間の旅の終わりなき足跡を残しました。各チームはフィールド調査の観察、インタビュー資料、そしてデザイン思考のプロセスを統合し、プロジェクト成果を発表、専門家からの評価とアドバイスを受けました。修了証書は単なるプログラムの修了を意味するだけでなく、参加者一人ひとりがこの経験を持ち帰り、日常生活の中で実践し続けることへの招待でもあります。
-                 </p>
-               </div>
-               
-               <div class="flex items-center justify-between border-t border-stone-100 mt-6 pt-4">
-                 <button onclick="switchDay(4)" class="text-xs font-bold text-[#B35C24] hover:text-[#9c4c1a] flex items-center gap-1.5 transition-colors group">
-                   <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-                   <span>前の日へ</span>
-                 </button>
-                 <button class="text-xs font-bold text-stone-300 cursor-not-allowed flex items-center gap-1.5" disabled>
-                   <span>次の日へ</span>
-                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                 </button>
-               </div>
-             </div>
-
-             <!-- Right: Single Polaroid Card -->
-             <div class="lg:col-span-5 flex justify-center items-center">
-               <div onclick="openLightbox(5, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
-                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
-                   <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                   <!-- Floating Photo Count Badge -->
-                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                     <span>16枚の写真</span>
-                   </div>
-                 </div>
-                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
-                   クリックしてアルバムを開く
-                 </div>
-               </div>
-             </div>
+          <!-- Day 5 Card -->
+          <div class="bg-white p-5 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.06)] hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm mx-auto lg:mx-0">
+            <div>
+              <!-- Polaroid Cover -->
+              <div onclick="openLightbox(5, 0)" class="bg-white p-3 pb-5 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group mb-4">
+                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <!-- Floating Photo Count Badge -->
+                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>16枚の写真</span>
+                  </div>
+                </div>
+              </div>
+              
+              <h3 class="text-base sm:text-lg font-extrabold text-[#0F2A1C] leading-snug">
+                Day 5｜佛光大学での約束：持続可能な植樹とプロジェクト成果発表
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed mt-3 bg-[#FAF5F0]/60 p-4 rounded-2xl border border-orange-100/30">
+                最終日は、継承と約束の象徴として植樹を行い、5日間の旅の終わりなき足跡を残しました。各チームはフィールド調査の観察、インタビュー資料、空間認識プロセスを統合し、プロジェクト成果を発表、専門家からの評価とアドバイスを受けました。修了証書は単なるプログラムの修了を意味するだけでなく、参加者一人ひとりがこの経験を持ち帰り、日常生活の中で実践し続けることへの招待でもあります。
+              </p>
+            </div>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              クリックしてアルバムを開く
+            </div>
           </div>
         </div>
       </div>
@@ -1126,6 +1023,7 @@
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
   <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeImage()">
     <button 
       class="absolute top-4 right-4 z-[110] bg-black/60 hover:bg-[#B35C24] text-white p-2.5 rounded-full transition-colors shadow-lg"
@@ -1281,46 +1179,6 @@
 
     let currentActiveDay = 1;
     let currentActivePhotoIndex = 0;
-
-    function switchDay(dayNum) {
-      currentActiveDay = dayNum;
-      
-      // Stacking class configurations
-      const pos1Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-30 scale-100 rotate-0 translate-x-0 translate-y-0 opacity-100 pointer-events-auto";
-      const pos2Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-20 scale-[0.98] rotate-[1.5deg] translate-x-2.5 translate-y-2.5 opacity-90 pointer-events-none";
-      const pos3Class = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-10 scale-[0.96] rotate-[3deg] translate-x-5 translate-y-5 opacity-80 pointer-events-none";
-      const posHiddenClass = "absolute inset-0 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_15px_40px_rgba(0,0,0,0.04)] w-full transition-all duration-500 ease-in-out z-0 scale-[0.94] rotate-[4.5deg] translate-x-7.5 translate-y-7.5 opacity-0 pointer-events-none";
-
-      const next1 = (dayNum % 5) + 1;
-      const next2 = ((dayNum + 1) % 5) + 1;
-
-      for (let d = 1; d <= 5; d++) {
-        const pane = document.getElementById(`day-pane-${d}`);
-        const btn = document.getElementById(`tab-btn-${d}`);
-        
-        // Style tabs
-        if (btn) {
-          if (d === dayNum) {
-            btn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 shadow-sm bg-white text-[#B35C24]";
-          } else {
-            btn.className = "flex-1 min-w-[80px] py-2.5 text-center rounded-2xl font-bold text-sm transition-all duration-300 text-stone-500 hover:text-stone-800";
-          }
-        }
-
-        // Apply stacking classes to panes
-        if (pane) {
-          if (d === dayNum) {
-            pane.className = pos1Class;
-          } else if (d === next1) {
-            pane.className = pos2Class;
-          } else if (d === next2) {
-            pane.className = pos3Class;
-          } else {
-            pane.className = posHiddenClass;
-          }
-        }
-      }
-    }
 
     // Lightbox Gallery Controller
     function openLightbox(dayNum, index) {
