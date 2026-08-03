@@ -44,8 +44,10 @@
     <div class="glass-header sticky top-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Icon" style="height: 36px; width: auto; max-height: 40px;" class="h-8 md:h-10 w-auto shrink-0" />
-          <a href="index.html" class="font-extrabold text-xl tracking-tight text-[#0F2A1C] hover:opacity-80 transition-opacity">泰拉學校 ｜ 地之校</a>
+          <a href="terra.html" onclick="openTerraModal(event)" class="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
+            <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Icon" style="height: 36px; width: auto; max-height: 40px;" class="h-8 md:h-10 w-auto shrink-0" />
+            <span class="font-extrabold text-xl tracking-tight text-[#0F2A1C]">泰拉學校 ｜ 地之校</span>
+          </a>
         </div>
         
         <!-- Desktop Navigation -->
@@ -1218,6 +1220,24 @@
       document.body.classList.remove('overflow-hidden');
     }
 
+    // Terra School Intro Modal Controller
+    function openTerraModal(e) {
+      if (e) e.preventDefault();
+      const modal = document.getElementById('terra-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+
+    function closeTerraModal() {
+      const modal = document.getElementById('terra-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
     // Image Lightbox Controller & Gallery Switcher
     const galleryData = {
       "1": [
@@ -1388,5 +1408,35 @@
     localStorage.setItem('terra-lang', 'zh');
   </script>
 
+
+  <!-- Terra School Intro Modal -->
+  <div id="terra-modal" class="fixed inset-0 z-[120] bg-black/60 backdrop-blur-md flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeTerraModal()">
+    <div class="bg-[#FAF5F0] max-w-2xl w-full p-8 md:p-10 rounded-3xl border border-stone-200 shadow-2xl relative cursor-default text-left max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <button 
+        class="absolute top-4 right-4 bg-stone-200/50 hover:bg-[#B35C24] hover:text-white text-stone-700 p-2 rounded-full transition-colors shadow-sm"
+        onclick="closeTerraModal()"
+        aria-label="Close modal"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Content Header -->
+      <div class="flex items-center gap-3 mb-6 border-b border-stone-200 pb-4">
+        <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Logo" style="height: 36px; width: auto;" />
+        <h2 class="text-2xl font-extrabold text-[#0F2A1C] font-serif">關於泰拉學校</h2>
+      </div>
+      
+      <!-- Content Body -->
+      <div class="font-serif text-stone-700 text-base md:text-lg leading-relaxed space-y-6">
+        <p>泰拉Terra是拉丁文的「地球」，泰拉學校希望帶著人們重新走回地球母親的懷抱，真實地體驗與認識祂。</p>
+        <p>泰拉學校是一所沒有圍牆的學校，以大地為教室、真實世界為教材。它的起點，來自我對未來教育的思考：當AI快速改變知識取得與工作的方式，學習不該只發生在課堂，更需要走進現場，認識真實的世界與問題。</p>
+        <p>泰拉學校以「地、天、海」三所學校為架構，帶領青年進入農村、高山與海洋。每一段學習都從走入大自然開始：打開五感，感受土地、植物與環境的變化；也在靜坐、觀察與體驗中放慢腳步，學習與自己連結，聆聽內在的感受與對話。</p>
+        <p>學生也會透過設計思考與AI工具，理解環境及地方議題，將所見所感轉化為具體提案。透過跨校、跨文化的團隊合作，練習溝通、同理、創造與行動，重新建立人與自然、人與自己，也與他人之間的連結。</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

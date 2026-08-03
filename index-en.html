@@ -44,8 +44,10 @@
     <div class="glass-header sticky top-0 z-50 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Icon" style="height: 36px; width: auto; max-height: 40px;" class="h-8 md:h-10 w-auto shrink-0" />
-          <a href="index-en.html" class="font-extrabold text-xl tracking-tight text-[#0F2A1C] hover:opacity-80 transition-opacity">Terra School | Earth</a>
+          <a href="terra-en.html" onclick="openTerraModal(event)" class="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer">
+            <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Icon" style="height: 36px; width: auto; max-height: 40px;" class="h-8 md:h-10 w-auto shrink-0" />
+            <span class="font-extrabold text-xl tracking-tight text-[#0F2A1C]">Terra School | Earth</span>
+          </a>
         </div>
         
         <!-- Desktop Navigation -->
@@ -1214,6 +1216,24 @@
       document.body.classList.remove('overflow-hidden');
     }
 
+    // Terra School Intro Modal Controller
+    function openTerraModal(e) {
+      if (e) e.preventDefault();
+      const modal = document.getElementById('terra-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+
+    function closeTerraModal() {
+      const modal = document.getElementById('terra-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
     // Image Lightbox Controller & Gallery Switcher
     const galleryData = {
       "1": [
@@ -1383,5 +1403,35 @@
     localStorage.setItem('terra-lang', 'en');
   </script>
 
+
+  <!-- Terra School Intro Modal -->
+  <div id="terra-modal" class="fixed inset-0 z-[120] bg-black/60 backdrop-blur-md flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeTerraModal()">
+    <div class="bg-[#FAF5F0] max-w-2xl w-full p-8 md:p-10 rounded-3xl border border-stone-200 shadow-2xl relative cursor-default text-left max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <button 
+        class="absolute top-4 right-4 bg-stone-200/50 hover:bg-[#B35C24] hover:text-white text-stone-700 p-2 rounded-full transition-colors shadow-sm"
+        onclick="closeTerraModal()"
+        aria-label="Close modal"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Content Header -->
+      <div class="flex items-center gap-3 mb-6 border-b border-stone-200 pb-4">
+        <img src="https://i.ibb.co/ZzxC3BVn/icon.png" alt="TERRA Logo" style="height: 36px; width: auto;" />
+        <h2 class="text-2xl font-extrabold text-[#0F2A1C] font-serif">About Terra School</h2>
+      </div>
+      
+      <!-- Content Body -->
+      <div class="font-serif text-stone-700 text-base md:text-lg leading-relaxed space-y-6">
+        <p>Terra means 'Earth' in Latin. Terra School hopes to bring people back into the embrace of Mother Earth, to experience and understand Her in a true way.</p>
+        <p>Terra School is a school without walls, using the Earth as its classroom and the real world as its textbook. Its starting point comes from my reflections on the future of education: as AI rapidly changes how we acquire knowledge and work, learning should not just happen in classrooms, but requires stepping onto the field to understand real-world issues.</p>
+        <p>Terra School is structured around three schools: 'Earth, Sky, and Sea,' leading youth into rural fields, high mountains, and deep oceans. Every learning journey begins with stepping into nature: opening the five senses to feel the changes in land, plants, and environment; and slowing down through meditation, observation, and experience to connect with oneself, listening to inner feelings and dialogues.</p>
+        <p>Students also utilize design thinking and AI tools to understand environmental and local issues, transforming their observations and feelings into concrete proposals. Through cross-school and cross-cultural teamwork, they practice communication, empathy, creativity, and action, rebuilding connections between humans and nature, humans and themselves, and with others.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
