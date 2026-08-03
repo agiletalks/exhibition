@@ -886,32 +886,72 @@
       <!-- 主辦單位 (Organizer) -->
       <div class="mb-16 max-w-2xl mx-auto px-4">
         <h3 class="text-xs uppercase tracking-widest text-[#B35C24] font-black mb-4">主辦單位 Organizer</h3>
-        <div class="bg-white border-2 border-orange-200/50 rounded-2xl p-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex justify-center items-center mx-auto" style="width: 180px; height: 72px;">
-          <img src="assets/photos/logos/1221FEDAlogo.jpeg" alt="社團法人1221未來教育發展協會" class="object-contain" style="max-width: 140px; max-height: 48px;" />
+        <div class="flex justify-center items-center mx-auto" style="height: 80px;">
+          <img src="assets/photos/logos/1221FEDAlogo.jpeg" alt="社團法人1221未來教育發展協會" class="object-contain" style="max-height: 64px; max-width: 100%;" />
         </div>
       </div>
       
       <!-- 合作夥伴 (Partners) -->
       <div class="max-w-5xl mx-auto mb-16 px-4">
-        <h3 class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-6">合作夥伴 Partners</h3>
-        <div class="flex flex-wrap justify-center items-center gap-4">
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/早稻田logo.png" alt="早稻田大學 (Waseda Univ.)" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+        <h3 class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-8">合作夥伴 Partners</h3>
+        <style>
+          .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+          }
+          @media (min-width: 768px) {
+            .partner-grid {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+              gap: 3rem;
+            }
+          }
+          @media (min-width: 1024px) {
+            .partner-grid {
+              grid-template-columns: repeat(6, minmax(0, 1fr));
+              gap: 2.5rem;
+            }
+          }
+          .partner-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+          }
+          .partner-logo-container:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-2px);
+          }
+          .partner-logo-img {
+            max-height: 44px;
+            max-width: 100%;
+            object-fit: contain;
+          }
+        </style>
+        <div class="partner-grid">
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/早稻田logo.png" alt="早稻田大學 (Waseda Univ.)" class="partner-logo-img" />
           </div>
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/清大立德領導人才培育計劃logo.png.avif" alt="國立清華大學 (NTHU)" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/清大立德領導人才培育計劃logo.png" alt="國立清華大學 (NTHU)" class="partner-logo-img" />
           </div>
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/安倍晉三logo.png" alt="國立政治大學安倍晉三研究中心" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/安倍晉三logo.png" alt="國立政治大學安倍晉三研究中心" class="partner-logo-img" />
           </div>
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/政大日本研究學程logo.png" alt="國立政治大學日本研究學程" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/政大日本研究學程logo.png" alt="國立政治大學日本研究學程" class="partner-logo-img" />
           </div>
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/永續共融發展協會logo.png" alt="社團法人台北市永續共榮發展協會" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/永續共融發展協會logo.png" alt="社團法人台北市永續共榮發展協會" class="partner-logo-img" />
           </div>
-          <div class="bg-white border border-stone-200/80 rounded-xl p-3 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center" style="width: 140px; height: 56px;">
-            <img src="assets/photos/logos/佛光大學永續發展辦公室logo.png" alt="佛光大學永續發展辦公室" class="object-contain" style="max-width: 110px; max-height: 36px;" />
+          <div class="partner-logo-container">
+            <img src="assets/photos/logos/佛光大學永續發展辦公室logo.png" alt="佛光大學永續發展辦公室" class="partner-logo-img" />
           </div>
         </div>
       </div>
