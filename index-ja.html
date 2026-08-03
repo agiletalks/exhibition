@@ -339,11 +339,12 @@
     
     <!-- Timeline Section -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <div class="text-center mb-10">
           <h2 class="text-2xl md:text-4xl font-extrabold text-[#0F2A1C]">5日間のフィールド学習の旅</h2>
-          <p class="text-stone-500 text-sm md:text-base mt-2">宜蘭員山、南澳、そして佛光大学における実地実践の軌跡</p>
+          <p class="text-stone-500 text-sm md:text-base mt-2">宜蘭員山、南澳、遠くは佛光大学における実地実践の軌跡</p>
         </div>
 
         <!-- Day Selector Tabs -->
@@ -368,9 +369,9 @@
         <!-- Dynamic Content Display -->
         <div id="day-content-container" class="transition-all duration-300">
           <!-- Day 1 Pane -->
-          <div id="day-pane-1" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch day-pane">
+          <div id="day-pane-1" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-5 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 01</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -393,36 +394,27 @@
                </div>
              </div>
 
-             <!-- Right: Featured Magazine Grid -->
-             <div class="lg:col-span-7 grid grid-cols-6 grid-rows-6 gap-2.5 h-[360px] sm:h-[480px]">
-               <div onclick="openLightbox(1, 0)" class="col-span-4 row-span-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(1, 1)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(1, 2)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(1, 3)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-4.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(1, 4)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(1, 5)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day1/1-5.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-                 <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover/pic:bg-stone-900/50">
-                   <span class="text-2xl font-black">+4</span>
-                   <span class="text-[10px] tracking-widest mt-1 opacity-80 uppercase font-semibold">枚の写真</span>
+             <!-- Right: Single Polaroid Card -->
+             <div class="lg:col-span-5 flex justify-center items-center">
+               <div onclick="openLightbox(1, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
+                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
+                   <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <!-- Floating Photo Count Badge -->
+                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                     <span>9枚の写真</span>
+                   </div>
+                 </div>
+                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
+                   クリックしてアルバムを開く
                  </div>
                </div>
              </div>
           </div>
           <!-- Day 2 Pane -->
-          <div id="day-pane-2" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch day-pane hidden">
+          <div id="day-pane-2" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-5 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 02</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -445,36 +437,27 @@
                </div>
              </div>
 
-             <!-- Right: Featured Magazine Grid -->
-             <div class="lg:col-span-7 grid grid-cols-6 grid-rows-6 gap-2.5 h-[360px] sm:h-[480px]">
-               <div onclick="openLightbox(2, 0)" class="col-span-4 row-span-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(2, 1)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(2, 2)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(2, 3)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-4.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(2, 4)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(2, 5)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day2/2-6.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-                 <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover/pic:bg-stone-900/50">
-                   <span class="text-2xl font-black">+10</span>
-                   <span class="text-[10px] tracking-widest mt-1 opacity-80 uppercase font-semibold">枚の写真</span>
+             <!-- Right: Single Polaroid Card -->
+             <div class="lg:col-span-5 flex justify-center items-center">
+               <div onclick="openLightbox(2, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
+                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
+                   <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <!-- Floating Photo Count Badge -->
+                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                     <span>15枚の写真</span>
+                   </div>
+                 </div>
+                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
+                   クリックしてアルバムを開く
                  </div>
                </div>
              </div>
           </div>
           <!-- Day 3 Pane -->
-          <div id="day-pane-3" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch day-pane hidden">
+          <div id="day-pane-3" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-5 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 03</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -497,36 +480,27 @@
                </div>
              </div>
 
-             <!-- Right: Featured Magazine Grid -->
-             <div class="lg:col-span-7 grid grid-cols-6 grid-rows-6 gap-2.5 h-[360px] sm:h-[480px]">
-               <div onclick="openLightbox(3, 0)" class="col-span-4 row-span-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(3, 1)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(3, 2)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(3, 3)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-4.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(3, 4)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-5.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(3, 5)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day3/3-6.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-                 <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover/pic:bg-stone-900/50">
-                   <span class="text-2xl font-black">+11</span>
-                   <span class="text-[10px] tracking-widest mt-1 opacity-80 uppercase font-semibold">枚の写真</span>
+             <!-- Right: Single Polaroid Card -->
+             <div class="lg:col-span-5 flex justify-center items-center">
+               <div onclick="openLightbox(3, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
+                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
+                   <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <!-- Floating Photo Count Badge -->
+                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                     <span>16枚の写真</span>
+                   </div>
+                 </div>
+                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
+                   クリックしてアルバムを開く
                  </div>
                </div>
              </div>
           </div>
           <!-- Day 4 Pane -->
-          <div id="day-pane-4" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch day-pane hidden">
+          <div id="day-pane-4" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-5 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 04</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
@@ -549,43 +523,34 @@
                </div>
              </div>
 
-             <!-- Right: Featured Magazine Grid -->
-             <div class="lg:col-span-7 grid grid-cols-6 grid-rows-6 gap-2.5 h-[360px] sm:h-[480px]">
-               <div onclick="openLightbox(4, 0)" class="col-span-4 row-span-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(4, 1)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(4, 2)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(4, 3)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-4.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(4, 4)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-5.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(4, 5)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day4/4-6.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-                 <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover/pic:bg-stone-900/50">
-                   <span class="text-2xl font-black">+10</span>
-                   <span class="text-[10px] tracking-widest mt-1 opacity-80 uppercase font-semibold">枚の写真</span>
+             <!-- Right: Single Polaroid Card -->
+             <div class="lg:col-span-5 flex justify-center items-center">
+               <div onclick="openLightbox(4, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
+                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
+                   <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <!-- Floating Photo Count Badge -->
+                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                     <span>15枚の写真</span>
+                   </div>
+                 </div>
+                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
+                   クリックしてアルバムを開く
                  </div>
                </div>
              </div>
           </div>
           <!-- Day 5 Pane -->
-          <div id="day-pane-5" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch day-pane hidden">
+          <div id="day-pane-5" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center day-pane hidden">
              <!-- Left: Information Card -->
-             <div class="lg:col-span-5 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+             <div class="lg:col-span-7 flex flex-col justify-between bg-white p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[320px]">
                <div>
                  <div class="text-4xl font-black text-orange-200/40 tracking-wider">DAY 05</div>
                  <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] mt-2 leading-snug">
                    Day 5｜佛光大学での約束：持続可能な植樹とプロジェクト成果発表
                  </h3>
                  <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-5 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                   最終日は、継承と約束の象徴として植樹を行い、5日間の旅の終わりなき足跡を残しました。各チームはフィールド調査の観察、インタビュー資料、そしてデザイン思考のプロセスを統合し、プロジェクト成果を発表、専門家からの評価とアドバイスを受けました。修了証書は単なるプログラムの修了を意味するだけでなく、参加者一人ひとりがこの経験を持ち帰り、日常生活の中で実践し続けることへの招待でもあります。
+                   最終日は、継承と約束の象徴として植樹を行い、5日間の旅の終わりなき足跡を残しました。各チームはフィールド調査の観察、インタビュー資料、空間認識プロセスを統合し、プロジェクト成果を発表、専門家からの評価とアドバイスを受けました。修了証書は単なるプログラムの修了を意味するだけでなく、参加者一人ひとりがこの経験を持ち帰り、日常生活の中で実践し続けることへの招待でもあります。
                  </p>
                </div>
                
@@ -601,28 +566,19 @@
                </div>
              </div>
 
-             <!-- Right: Featured Magazine Grid -->
-             <div class="lg:col-span-7 grid grid-cols-6 grid-rows-6 gap-2.5 h-[360px] sm:h-[480px]">
-               <div onclick="openLightbox(5, 0)" class="col-span-4 row-span-4 rounded-3xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(5, 1)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(5, 2)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(5, 3)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-4.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(5, 4)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-5.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-               </div>
-               <div onclick="openLightbox(5, 5)" class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-sm border border-stone-200/50 hover:scale-[1.01] transition-all duration-300 cursor-zoom-in relative bg-white group/pic">
-                 <img src="assets/photos/day5/5-6.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover/pic:scale-105" />
-                 <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover/pic:bg-stone-900/50">
-                   <span class="text-2xl font-black">+11</span>
-                   <span class="text-[10px] tracking-widest mt-1 opacity-80 uppercase font-semibold">枚の写真</span>
+             <!-- Right: Single Polaroid Card -->
+             <div class="lg:col-span-5 flex justify-center items-center">
+               <div onclick="openLightbox(5, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/60 shadow-[0_15px_30px_rgba(0,0,0,0.04)] rounded-2xl w-64 sm:w-72 transform hover:-translate-y-2 hover:rotate-2 hover:shadow-xl transition-all duration-500 cursor-zoom-in group">
+                 <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative mb-4">
+                   <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <!-- Floating Photo Count Badge -->
+                   <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
+                     <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                     <span>16枚の写真</span>
+                   </div>
+                 </div>
+                 <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider select-none font-medium">
+                   クリックしてアルバムを開く
                  </div>
                </div>
              </div>
@@ -1166,6 +1122,7 @@
   </div>
 
   <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
   <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-zoom-out hidden" onclick="closeImage()">
     <button 
