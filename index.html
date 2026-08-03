@@ -19,6 +19,23 @@
 
   <!-- Custom Styles Sheet -->
   <link rel="stylesheet" href="css/tailwind.css">
+  <style>
+    /* Custom horizontal scrollbar for photos */
+    .photo-track::-webkit-scrollbar {
+      height: 6px;
+    }
+    .photo-track::-webkit-scrollbar-track {
+      background: rgba(245, 240, 235, 0.5);
+      border-radius: 9999px;
+    }
+    .photo-track::-webkit-scrollbar-thumb {
+      background: rgba(179, 92, 36, 0.3);
+      border-radius: 9999px;
+    }
+    .photo-track::-webkit-scrollbar-thumb:hover {
+      background: rgba(179, 92, 36, 0.6);
+    }
+  </style>
 </head>
 <body class="bg-stone-50 text-stone-900 antialiased">
 
@@ -339,26 +356,62 @@
               </h3>
               <p class="text-stone-600 text-sm md:text-base mt-2 leading-relaxed max-w-3xl">深入阿聰自然田，踏查格外品與在地甘蔗文化，開啟感知雷達。</p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 max-w-4xl">
-                <div onclick="showImage('assets/photos/day1/openspace_topic_selection.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day1/openspace_topic_selection.jpg" alt="Open Space 分組選題" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+              
+              <!-- Photo Gallery Track -->
+              <div class="flex overflow-x-auto gap-4 py-4 px-2 photo-track snap-x snap-mandatory max-w-4xl mt-6">
+                <div onclick="showImage('assets/photos/day1/1-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-1.jpg" alt="1-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">Open Space 分組選題</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-1</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day1/departure_group_photo.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day1/departure_group_photo.jpg" alt="台日青年出發前大合影" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day1/1-2.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-2.jpg" alt="1-2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">台日青年出發前大合影</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-2</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day1/speakers_group_photo.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day1/speakers_group_photo.jpg" alt="論壇講者合影" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day1/1-3.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-3.jpg" alt="1-3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">論壇講者合影</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-3</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-4.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-4.jpg" alt="1-4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-4</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-4-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-4-1.jpg" alt="1-4-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-4-1</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-5.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-5.jpg" alt="1-5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-5</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-6.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-6.jpg" alt="1-6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-6</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-7.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-7.jpg" alt="1-7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-7</div>
+                </div>
+                <div onclick="showImage('assets/photos/day1/1-8.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day1/1-8.jpg" alt="1-8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">1-8</div>
                 </div>
               </div>
             </div>
@@ -374,26 +427,98 @@
               </h3>
               <p class="text-stone-600 text-sm md:text-base mt-2 leading-relaxed max-w-3xl">與老農、移居者、在地青年對話，用 AI 協作轉寫音檔並進行數據索引編碼。</p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 max-w-4xl">
-                <div onclick="showImage('assets/photos/day2/natural_awareness_root_energy.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day2/natural_awareness_root_energy.jpg" alt="自然覺察：感受樹根生命力" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+              
+              <!-- Photo Gallery Track -->
+              <div class="flex overflow-x-auto gap-4 py-4 px-2 photo-track snap-x snap-mandatory max-w-4xl mt-6">
+                <div onclick="showImage('assets/photos/day2/2-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-1.jpg" alt="2-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">自然覺察：感受樹根生命力</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-1</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day2/harvesting_sugarcane.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day2/harvesting_sugarcane.jpg" alt="自然田體驗：採甘蔗" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day2/2-2.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-2.jpg" alt="2-2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">自然田體驗：採甘蔗</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-2</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day2/cultural_night_music.jpeg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day2/cultural_night_music.jpeg" alt="台日交流之夜：音樂共鳴" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day2/2-3.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-3.jpg" alt="2-3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">台日交流之夜：音樂共鳴</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-3</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-4.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-4.jpg" alt="2-4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-4</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-5-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-5-1.jpg" alt="2-5-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-5-1</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-6.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-6.jpg" alt="2-6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-6</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-7.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-7.jpg" alt="2-7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-7</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-8.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-8.jpg" alt="2-8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-8</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-9.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-9.jpg" alt="2-9" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-9</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-10.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-10.jpg" alt="2-10" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-10</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-11.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-11.jpg" alt="2-11" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-11</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-12.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-12.jpg" alt="2-12" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-12</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-13.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-13.jpg" alt="2-13" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-13</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-14.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-14.jpg" alt="2-14" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-14</div>
+                </div>
+                <div onclick="showImage('assets/photos/day2/2-15.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day2/2-15.jpg" alt="2-15" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">2-15</div>
                 </div>
               </div>
             </div>
@@ -409,26 +534,104 @@
               </h3>
               <p class="text-stone-600 text-sm md:text-base mt-2 leading-relaxed max-w-3xl">親手勞動熬製蔗汁，體驗土地產出的溫度與農業加工轉型實踐。</p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 max-w-4xl">
-                <div onclick="showImage('assets/photos/day3/harvesting_lotus_seeds.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day3/harvesting_lotus_seeds.jpg" alt="水月農莊：下田採蓮蓬" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+              
+              <!-- Photo Gallery Track -->
+              <div class="flex overflow-x-auto gap-4 py-4 px-2 photo-track snap-x snap-mandatory max-w-4xl mt-6">
+                <div onclick="showImage('assets/photos/day3/3-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-1.jpg" alt="3-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">水月農莊：下田採蓮蓬</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-1</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day3/leica_presentation.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day3/leica_presentation.jpg" alt="慢島生活：Leica 演講分享" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day3/3-2.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-2.jpg" alt="3-2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">慢島生活：Leica 演講分享</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-2</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day3/design_thinking_group_work.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day3/design_thinking_group_work.jpg" alt="設計思考：深夜分組討論" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day3/3-3.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-3.jpg" alt="3-3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">設計思考：深夜分組討論</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-3</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-4.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-4.jpg" alt="3-4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-4</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-5.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-5.jpg" alt="3-5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-5</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-6.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-6.jpg" alt="3-6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-6</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-7.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-7.jpg" alt="3-7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-7</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-8.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-8.jpg" alt="3-8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-8</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-9.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-9.jpg" alt="3-9" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-9</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-10.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-10.jpg" alt="3-10" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-10</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-11.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-11.jpg" alt="3-11" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-11</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-12.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-12.jpg" alt="3-12" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-12</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-13.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-13.jpg" alt="3-13" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-13</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-14.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-14.jpg" alt="3-14" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-14</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-15.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-15.jpg" alt="3-15" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-15</div>
+                </div>
+                <div onclick="showImage('assets/photos/day3/3-16.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day3/3-16.jpg" alt="3-16" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">3-16</div>
                 </div>
               </div>
             </div>
@@ -444,26 +647,98 @@
               </h3>
               <p class="text-stone-600 text-sm md:text-base mt-2 leading-relaxed max-w-3xl">台日學生共同定義 HMW 問題，發想並手繪解決方案草圖，產出低保真原型。</p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 max-w-4xl">
-                <div onclick="showImage('assets/photos/day4/fishing_contest.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day4/fishing_contest.jpg" alt="慢島生活：釣魚大賽" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+              
+              <!-- Photo Gallery Track -->
+              <div class="flex overflow-x-auto gap-4 py-4 px-2 photo-track snap-x snap-mandatory max-w-4xl mt-6">
+                <div onclick="showImage('assets/photos/day4/4-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-1.jpg" alt="4-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">慢島生活：釣魚大賽</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-1</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day4/handmaking_rice_cakes.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day4/handmaking_rice_cakes.jpg" alt="手作體驗：做米糕點" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day4/4-2.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-2.jpg" alt="4-2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">手作體驗：做米糕點</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-2</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day4/waseda_students_fishing.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day4/waseda_students_fishing.jpg" alt="早稻田學員釣魚體驗" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day4/4-3.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-3.jpg" alt="4-3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">早稻田學員釣魚體驗</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-3</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-4.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-4.jpg" alt="4-4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-4</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-5.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-5.jpg" alt="4-5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-5</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-6.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-6.jpg" alt="4-6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-6</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-7.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-7.jpg" alt="4-7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-7</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-8.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-8.jpg" alt="4-8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-8</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-9.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-9.jpg" alt="4-9" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-9</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-9-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-9-1.jpg" alt="4-9-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-9-1</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-10.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-10.jpg" alt="4-10" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-10</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-11.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-11.jpg" alt="4-11" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-11</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-12.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-12.jpg" alt="4-12" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-12</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-13.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-13.jpg" alt="4-13" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-13</div>
+                </div>
+                <div onclick="showImage('assets/photos/day4/4-14.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day4/4-14.jpg" alt="4-14" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">4-14</div>
                 </div>
               </div>
             </div>
@@ -479,26 +754,104 @@
               </h3>
               <p class="text-stone-600 text-sm md:text-base mt-2 leading-relaxed max-w-3xl">向地方小農、專家與外部評審發表 MVP 提案，進行落地驗證評估。</p>
               
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 max-w-4xl">
-                <div onclick="showImage('assets/photos/day5/coach_xu_feedback.JPG')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day5/coach_xu_feedback.JPG" alt="成果發表：徐柏峯教練講評" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+              
+              <!-- Photo Gallery Track -->
+              <div class="flex overflow-x-auto gap-4 py-4 px-2 photo-track snap-x snap-mandatory max-w-4xl mt-6">
+                <div onclick="showImage('assets/photos/day5/5-1.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-1.jpg" alt="5-1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">成果發表：徐柏峯教練講評</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-1</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day5/teacher_lai_feedback.JPG')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day5/teacher_lai_feedback.JPG" alt="成果發表：賴青松老師講評" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day5/5-2.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-2.jpg" alt="5-2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">成果發表：賴青松老師講評</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-2</div>
                 </div>
-
-                <div onclick="showImage('assets/photos/day5/rainbow_clouds_blessing.jpg')" class="bg-white p-3 pb-5 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-2 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid">
-                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-3 relative">
-                    <img src="assets/photos/day5/rainbow_clouds_blessing.jpg" alt="蓋婭的祝福：營隊圓滿彩雲" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                <div onclick="showImage('assets/photos/day5/5-3.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-3.jpg" alt="5-3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
                   </div>
-                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">蓋婭的祝福：營隊圓滿彩雲</div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-3</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-4.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-4.jpg" alt="5-4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-4</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-5.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-5.jpg" alt="5-5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-5</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-6.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-6.jpg" alt="5-6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-6</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-7.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-7.jpg" alt="5-7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-7</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-8.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-8.jpg" alt="5-8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-8</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-9.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-9.jpg" alt="5-9" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-9</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-10.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-10.jpg" alt="5-10" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-10</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-11.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-11.jpg" alt="5-11" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-11</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-12.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-12.jpg" alt="5-12" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-12</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-13.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-13.jpg" alt="5-13" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-13</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-14.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-14.jpg" alt="5-14" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-14</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-15.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-15.jpg" alt="5-15" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-15</div>
+                </div>
+                <div onclick="showImage('assets/photos/day5/5-16.jpg')" class="flex-none w-44 sm:w-52 bg-white p-2.5 pb-4 shadow-sm border border-stone-200/50 rounded-xl transform hover:-translate-y-1.5 hover:rotate-1 hover:shadow-md transition-all duration-300 cursor-zoom-in group/polaroid snap-start">
+                  <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 mb-2.5 relative">
+                    <img src="assets/photos/day5/5-16.jpg" alt="5-16" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover/polaroid:scale-105" />
+                  </div>
+                  <div class="text-center font-serif text-[10px] sm:text-xs text-stone-500 tracking-wide select-none truncate">5-16</div>
                 </div>
               </div>
             </div>
