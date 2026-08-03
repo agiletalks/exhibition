@@ -880,77 +880,111 @@
     <section id="partners" class="max-w-7xl mx-auto px-6 py-20 border-t border-stone-200 w-full text-center scroll-mt-28">
       <div class="mb-16">
         <h2 class="text-3xl md:text-5xl font-black text-[#0F2A1C] tracking-tight">Organizer & Partners</h2>
-        <div class="h-1.5 w-16 bg-[#B35C24] mx-auto mt-4 rounded-full"></div>
-      </div>
-      
-      <!-- Organizer -->
-      <div class="mb-16 max-w-2xl mx-auto px-4">
-        <h3 class="text-xs uppercase tracking-widest text-[#B35C24] font-black mb-4">Organizer</h3>
-        <div class="flex justify-center items-center mx-auto" style="height: 80px;">
-          <img src="assets/photos/logos/1221FEDAlogo.png" alt="1221 Future Education Development Association" class="object-contain" style="max-height: 64px; max-width: 100%;" />
-        </div>
-      </div>
-      
-      <!-- Partners -->
-      <div class="max-w-5xl mx-auto mb-16 px-4">
-        <h3 class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-8">Partners</h3>
         <style>
-          .partner-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 2rem;
+        .logo-flex-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3rem;
+          justify-content: center;
+        }
+        @media (min-width: 1024px) {
+          .logo-flex-container {
+            flex-direction: row;
+            gap: 2.5rem;
             align-items: center;
-            justify-content: center;
           }
-          @media (min-width: 768px) {
-            .partner-grid {
-              grid-template-columns: repeat(3, minmax(0, 1fr));
-              gap: 3rem;
-            }
+        }
+        .organizer-logo-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px;
+          transition: all 0.3s ease;
+        }
+        .organizer-logo-wrap:hover {
+          transform: translateY(-2px);
+        }
+        .logo-divider {
+          display: none;
+        }
+        @media (min-width: 1024px) {
+          .logo-divider {
+            display: block;
+            width: 1px;
+            height: 40px;
+            background-color: rgba(214, 211, 209, 0.8); /* stone-300 */
           }
-          @media (min-width: 1024px) {
-            .partner-grid {
-              grid-template-columns: repeat(6, minmax(0, 1fr));
-              gap: 2.5rem;
-            }
+        }
+        .partner-logo-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 2rem;
+          align-items: center;
+          justify-content: center;
+        }
+        @media (min-width: 768px) {
+          .partner-logo-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 3rem;
           }
-          .partner-logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60px;
-            filter: grayscale(100%);
-            opacity: 0.6;
-            transition: all 0.3s ease;
+        }
+        @media (min-width: 1024px) {
+          .partner-logo-grid {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 2.5rem;
           }
-          .partner-logo-container:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: translateY(-2px);
-          }
-          .partner-logo-img {
-            max-width: 100%;
-            object-fit: contain;
-          }
-        </style>
-        <div class="partner-grid">
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/早稻田logo.png" alt="Waseda Univ." class="partner-logo-img" style="max-height: 60px;" />
+        }
+        .partner-logo-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 60px;
+          transition: all 0.3s ease;
+        }
+        .partner-logo-wrap:hover {
+          transform: translateY(-2px);
+        }
+        .logo-img {
+          max-width: 100%;
+          object-fit: contain;
+        }
+      </style>
+
+      <div class="logo-flex-container max-w-6xl mx-auto mb-20 px-4">
+        <!-- 主辦單位 (Organizer) -->
+        <div class="flex flex-col items-center gap-2">
+          <span class="text-[10px] uppercase tracking-widest text-[#B35C24] font-black opacity-80 lg:hidden">Organizer</span>
+          <div class="organizer-logo-wrap">
+            <img src="assets/photos/logos/1221FEDAlogo.png" alt="1221 Future Education Development Association" class="logo-img" style="max-height: 60px;" />
           </div>
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/清大立德領導人才培育計劃logo.png" alt="National Tsing Hua Univ. (NTHU)" class="partner-logo-img" style="max-height: 52px;" />
-          </div>
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/安倍晉三logo.png" alt="Shinzo Abe Center for Japan Studies, NCCU" class="partner-logo-img" style="max-height: 40px;" />
-          </div>
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/政大日本研究學程logo.png" alt="Japan Studies Program, NCCU" class="partner-logo-img" style="max-height: 38px;" />
-          </div>
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/永續共融發展協會logo.png" alt="Taipei Sustainable and Inclusive Development Association" class="partner-logo-img" style="max-height: 40px;" />
-          </div>
-          <div class="partner-logo-container">
-            <img src="assets/photos/logos/佛光大學永續發展辦公室logo.png" alt="Office of Sustainable Development, Fo Guang University" class="partner-logo-img" style="max-height: 42px;" />
+        </div>
+        
+        <!-- 分隔線 (Divider) -->
+        <div class="logo-divider"></div>
+        
+        <!-- 合作夥伴 (Partners) -->
+        <div class="flex flex-col items-center gap-4">
+          <span class="text-[10px] uppercase tracking-widest text-stone-400 font-bold opacity-80 lg:hidden">Partners</span>
+          <div class="partner-logo-grid">
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/早稻田logo.png" alt="Waseda Univ." class="logo-img" style="max-height: 56px;" />
+            </div>
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/清大立德領導人才培育計劃logo.png" alt="National Tsing Hua Univ. (NTHU)" class="logo-img" style="max-height: 48px;" />
+            </div>
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/安倍晉三logo.png" alt="Shinzo Abe Center for Japan Studies, NCCU" class="logo-img" style="max-height: 38px;" />
+            </div>
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/政大日本研究學程logo.png" alt="Japan Studies Program, NCCU" class="logo-img" style="max-height: 36px;" />
+            </div>
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/永續共融發展協會logo.png" alt="Taipei Sustainable and Inclusive Development Association" class="logo-img" style="max-height: 38px;" />
+            </div>
+            <div class="partner-logo-wrap">
+              <img src="assets/photos/logos/佛光大學永續發展辦公室logo.png" alt="Office of Sustainable Development, Fo Guang University" class="logo-img" style="max-height: 40px;" />
+            </div>
           </div>
         </div>
       </div>
