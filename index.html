@@ -344,6 +344,7 @@
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
     <!-- Timeline Section (Interactive Gallery) -->
+    <!-- Timeline Section (Interactive Gallery) -->
     <section id="timeline" class="max-w-7xl mx-auto px-6 py-16 bg-[#FAF5F0] border-y border-stone-200 w-full scroll-mt-28">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
@@ -351,151 +352,246 @@
           <p class="text-stone-500 text-sm md:text-base mt-2">在宜蘭員山、南澳與佛光大學的實地實踐軌跡</p>
         </div>
 
-        <!-- Cards Alternating List Container -->
+        <!-- Cards List Container -->
         <div class="flex flex-col gap-10 max-w-5xl mx-auto">
           <!-- Day 1 Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
-            <!-- Photo Column -->
-            <div class="w-full lg:w-5/12 flex justify-center">
-              <div onclick="openLightbox(1, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
-                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col w-full">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] leading-snug mb-4">
+              Day 1 | 政大國際論壇：台日青年相遇與跨國團隊啟程
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
+              台日青年齊聚政治大學，從「城鄉共創與永續食農」論壇展開五日旅程。透過不同領域實踐者的分享，認識農業、地方與科技的多元可能。傍晚前往南澳，在破冰與開放討論中組成跨國團隊，選定探索方向，為接下來的田野行動揭開序幕。
+            </p>
+
+            <!-- 3 Landscape Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Photo 1 -->
+              <div onclick="openLightbox(1, 0)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
                   <img src="assets/photos/day1/1-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <!-- Floating Photo Count Badge -->
-                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <span>共 9 張照片</span>
-                  </div>
                 </div>
-                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-                  點擊開啟相簿
+              </div>
+              
+              <!-- Photo 2 -->
+              <div onclick="openLightbox(1, 1)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
+                  <img src="assets/photos/day1/1-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+              
+              <!-- Photo 3 -->
+              <div onclick="openLightbox(1, 2)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day1/1-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  
+                  <!-- Overlay for remaining photos -->
+                  <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover:bg-stone-900/50 rounded-lg">
+                    <span class="text-xl font-black">+6</span>
+                    <span class="text-[9px] tracking-wider mt-0.5 opacity-80 uppercase font-semibold">張照片</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             
-            <!-- Text Column -->
-            <div class="w-full lg:w-7/12">
-              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
-                Day 1 | 政大國際論壇：台日青年相遇與跨國團隊啟程
-              </h3>
-              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                台日青年齊聚政治大學，從「城鄉共創與永續食農」論壇展開五日旅程。透過不同領域實踐者的分享，認識農業、地方與科技的多元可能。傍晚前往南澳，在破冰與開放討論中組成跨國團隊，選定探索方向，為接下來的田野行動揭開序幕。
-              </p>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              點擊開啟相簿
             </div>
           </div>
           <!-- Day 2 Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
-            <!-- Photo Column -->
-            <div class="w-full lg:w-5/12 flex justify-center">
-              <div onclick="openLightbox(2, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
-                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col w-full">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] leading-snug mb-4">
+              Day 2 | 走進南澳田野：原生園靜坐與甘蔗採收
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
+              清晨從原生植物園的靜坐開始，練習放慢腳步，以五感重新感受土地。接著走進阿聰自然田，親手採甘蔗、榨甘蔗汁、製作竹杯，也從部落料理與文化認識地方。下午運用AI進行案頭研究，整理市場資料並設計訪談大綱，讓體驗逐步轉化為探索問題。
+            </p>
+
+            <!-- 3 Landscape Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Photo 1 -->
+              <div onclick="openLightbox(2, 0)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
                   <img src="assets/photos/day2/2-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <!-- Floating Photo Count Badge -->
-                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <span>共 15 張照片</span>
-                  </div>
                 </div>
-                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-                  點擊開啟相簿
+              </div>
+              
+              <!-- Photo 2 -->
+              <div onclick="openLightbox(2, 1)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
+                  <img src="assets/photos/day2/2-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+              
+              <!-- Photo 3 -->
+              <div onclick="openLightbox(2, 2)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day2/2-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  
+                  <!-- Overlay for remaining photos -->
+                  <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover:bg-stone-900/50 rounded-lg">
+                    <span class="text-xl font-black">+12</span>
+                    <span class="text-[9px] tracking-wider mt-0.5 opacity-80 uppercase font-semibold">張照片</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             
-            <!-- Text Column -->
-            <div class="w-full lg:w-7/12">
-              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
-                Day 2 | 走進南澳田野：原生園靜坐與甘蔗採收
-              </h3>
-              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                清晨從原生植物園的靜坐開始，練習放慢腳步，以五感重新感受土地。接著走進阿聰自然田，親手採甘蔗、榨甘蔗汁、製作竹杯，也從部落料理與文化認識地方。下午運用AI進行案頭研究，整理市場資料並設計訪談大綱，讓體驗逐步轉化為探索問題。
-              </p>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              點擊開啟相簿
             </div>
           </div>
           <!-- Day 3 Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
-            <!-- Photo Column -->
-            <div class="w-full lg:w-5/12 flex justify-center">
-              <div onclick="openLightbox(3, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
-                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col w-full">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] leading-snug mb-4">
+              Day 3 | 水月農莊到慢島生活：蓮子採收與米食烘焙體驗
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
+              在水月農莊的五色稻田、蓮田與黑豆田中，學生從實際勞作認識作物與自然農法，也一起製作飯糰、品嘗蓮子湯。下午前往慢島生活，訪談有機商店經營者，走入田間踏查水稻並體驗稻草編織，理解農業如何與生活選擇、地方經營及社群連結。
+            </p>
+
+            <!-- 3 Landscape Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Photo 1 -->
+              <div onclick="openLightbox(3, 0)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
                   <img src="assets/photos/day3/3-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <!-- Floating Photo Count Badge -->
-                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <span>共 16 張照片</span>
-                  </div>
                 </div>
-                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-                  點擊開啟相簿
+              </div>
+              
+              <!-- Photo 2 -->
+              <div onclick="openLightbox(3, 1)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
+                  <img src="assets/photos/day3/3-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+              
+              <!-- Photo 3 -->
+              <div onclick="openLightbox(3, 2)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day3/3-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  
+                  <!-- Overlay for remaining photos -->
+                  <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover:bg-stone-900/50 rounded-lg">
+                    <span class="text-xl font-black">+13</span>
+                    <span class="text-[9px] tracking-wider mt-0.5 opacity-80 uppercase font-semibold">張照片</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             
-            <!-- Text Column -->
-            <div class="w-full lg:w-7/12">
-              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
-                Day 3 | 水月農莊到慢島生活：蓮子採收與米食烘焙體驗
-              </h3>
-              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                在水月農莊的五色稻田、蓮田與黑豆田中，學生從實際勞作認識作物與自然農法，也一起製作飯糰、品嘗蓮子湯。下午前往慢島生活，訪談有機商店經營者，走入田間踏查水稻並體驗稻草編織，理解農業如何與生活選擇、地方經營及社群連結。
-              </p>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              點擊開啟相簿
             </div>
           </div>
           <!-- Day 4 Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row-reverse items-center gap-8 w-full">
-            <!-- Photo Column -->
-            <div class="w-full lg:w-5/12 flex justify-center">
-              <div onclick="openLightbox(4, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
-                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col w-full">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] leading-snug mb-4">
+              Day 4 | 走進深溝「調」魚：半農半X深度訪談
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
+              清晨走進深溝田區，跟隨生態工作者進行水田魚類調查，從觀察與操作理解農田也是重要的生態棲地。接著訪談生態學家、工程師、烘焙工作者等不同類型的「半農半X」實踐者，並親手製作米烘焙。晚間各組運用AI整理訪談素材、提煉洞察，發展解決方案。
+            </p>
+
+            <!-- 3 Landscape Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Photo 1 -->
+              <div onclick="openLightbox(4, 0)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
                   <img src="assets/photos/day4/4-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <!-- Floating Photo Count Badge -->
-                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <span>共 15 張照片</span>
-                  </div>
                 </div>
-                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-                  點擊開啟相簿
+              </div>
+              
+              <!-- Photo 2 -->
+              <div onclick="openLightbox(4, 1)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
+                  <img src="assets/photos/day4/4-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+              
+              <!-- Photo 3 -->
+              <div onclick="openLightbox(4, 2)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day4/4-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  
+                  <!-- Overlay for remaining photos -->
+                  <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover:bg-stone-900/50 rounded-lg">
+                    <span class="text-xl font-black">+12</span>
+                    <span class="text-[9px] tracking-wider mt-0.5 opacity-80 uppercase font-semibold">張照片</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             
-            <!-- Text Column -->
-            <div class="w-full lg:w-7/12">
-              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
-                Day 4 | 走進深溝「調」魚：半農半X深度訪談
-              </h3>
-              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                清晨走進深溝田區，跟隨生態工作者進行水田魚類調查，從觀察與操作理解農田也是重要的生態棲地。接著訪談生態學家、工程師、烘焙工作者等不同類型的「半農半X」實踐者，並親手製作米烘焙。晚間各組運用AI整理訪談素材、提煉洞察，發展解決方案。
-              </p>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              點擊開啟相簿
             </div>
           </div>
           <!-- Day 5 Card -->
-          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col lg:flex-row items-center gap-8 w-full">
-            <!-- Photo Column -->
-            <div class="w-full lg:w-5/12 flex justify-center">
-              <div onclick="openLightbox(5, 0)" class="bg-white p-3.5 pb-6 border border-stone-200/50 shadow-sm rounded-2xl cursor-zoom-in relative group w-64 sm:w-72 transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300">
-                <div class="aspect-[4/3] rounded-lg overflow-hidden bg-stone-100 relative">
+          <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/60 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col w-full">
+            <!-- Title -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F2A1C] leading-snug mb-4">
+              Day 5 | 佛光大學種下承諾：永續植樹與專案成果發表
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
+              最後一天以植樹行動象徵傳承與承諾，也為五日旅程留下延續的印記。各組整合田野觀察、訪談資料與設計思考歷程，提出專案成果並進行簡報，由專家給予講評與建議。結業證書代表的不著完成活動，也邀請每位參與者將這段經驗帶回生活，繼續實踐。
+            </p>
+
+            <!-- 3 Landscape Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Photo 1 -->
+              <div onclick="openLightbox(5, 0)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
                   <img src="assets/photos/day5/5-1.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <!-- Floating Photo Count Badge -->
-                  <div class="absolute bottom-2.5 right-2.5 bg-stone-900/80 backdrop-blur-[2px] text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md">
-                    <svg class="w-3.5 h-3.5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    <span>共 16 張照片</span>
-                  </div>
                 </div>
-                <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
-                  點擊開啟相簿
+              </div>
+              
+              <!-- Photo 2 -->
+              <div onclick="openLightbox(5, 1)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100">
+                  <img src="assets/photos/day5/5-2.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+              
+              <!-- Photo 3 -->
+              <div onclick="openLightbox(5, 2)" class="bg-white p-2.5 pb-4 border border-stone-200/50 shadow-sm rounded-xl cursor-zoom-in relative group hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <div class="aspect-[3/2] rounded-lg overflow-hidden bg-stone-100 relative">
+                  <img src="assets/photos/day5/5-3.jpg" alt="Photo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  
+                  <!-- Overlay for remaining photos -->
+                  <div class="absolute inset-0 bg-stone-900/60 flex flex-col items-center justify-center text-white font-extrabold transition-opacity duration-300 group-hover:bg-stone-900/50 rounded-lg">
+                    <span class="text-xl font-black">+13</span>
+                    <span class="text-[9px] tracking-wider mt-0.5 opacity-80 uppercase font-semibold">張照片</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
             
-            <!-- Text Column -->
-            <div class="w-full lg:w-7/12">
-              <h3 class="text-xl font-extrabold text-[#0F2A1C] leading-snug">
-                Day 5 | 佛光大學種下承諾：永續植樹與專案成果發表
-              </h3>
-              <p class="text-stone-600 text-sm sm:text-base leading-relaxed mt-4 bg-[#FAF5F0]/60 p-5 rounded-2xl border border-orange-100/30">
-                最後一天以植樹行動象徵傳承與承諾，也為五日旅程留下延續的印記。各組整合田野觀察、訪談資料與設計思考歷程，提出專案成果並進行簡報，由專家給予講評與建議。結業證書代表的不著完成活動，也邀請每位參與者將這段經驗帶回生活，繼續實踐。
-              </p>
+            <div class="text-center font-serif text-[10px] text-stone-400 tracking-wider mt-4 select-none font-medium">
+              點擊開啟相簿
             </div>
           </div>
         </div>
@@ -1037,6 +1133,7 @@
   </div>
 
   <!-- Image Lightbox Modal -->
+    <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
     <!-- Image Lightbox Modal -->
