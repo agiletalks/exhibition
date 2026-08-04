@@ -1408,6 +1408,41 @@
 
     // Persist Language Settings in LocalStorage
     localStorage.setItem('terra-lang', 'ja');
+
+    // Navigation Scrollspy Highlight Controller
+    (function() {
+      const scrollspySections = ['timeline', 'methodology', 'quotes', 'partners'];
+      const scrollspyLinks = {};
+      scrollspySections.forEach(id => {
+        scrollspyLinks[id] = document.querySelector(`nav a[href$="#${id}"]`);
+      });
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-35% 0px -55% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            // Deactivate all
+            Object.values(scrollspyLinks).forEach(link => {
+              if (link) link.classList.remove('text-[#B35C24]', 'font-bold');
+            });
+            // Activate active
+            const activeLink = scrollspyLinks[id];
+            if (activeLink) activeLink.classList.add('text-[#B35C24]', 'font-bold');
+          }
+        });
+      }, observerOptions);
+
+      scrollspySections.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
+    })();
   </script>
 
 
