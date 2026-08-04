@@ -273,9 +273,19 @@
     Addressing pain points from field research, Taiwanese and Japanese students bridged language and disciplinary barriers, co-creating four clever MVP solutions through agile iteration. Click images to zoom in on presentations and prototype screenshots:
   </p>
 
-  <div class="showcase-grid">
-    <!-- Team A (Green) -->
-    <div class="showcase-card" data-team="A">
+  <!-- Interactive Tabs for 4 Groups -->
+  <div class="tabs-container">
+    <div class="tab-buttons">
+      <span class="tab-label">Group Proposals:</span>
+      <button class="tab-btn active" data-team="A" onclick="switchTab('A')" title="Team A (Green)">A</button>
+      <button class="tab-btn" data-team="B" onclick="switchTab('B')" title="Team B (Blue)">B</button>
+      <button class="tab-btn" data-team="C" onclick="switchTab('C')" title="Team C (Yellow)">C</button>
+      <button class="tab-btn" data-team="D" onclick="switchTab('D')" title="Team D (Red)">D</button>
+    </div>
+
+    <!-- Tab A (Green) -->
+    <div id="tab-A" class="tab-content active">
+      <div class="showcase-card" data-team="A">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team A (Green) Proposal</span>
@@ -297,9 +307,11 @@
         <div class="zoom-overlay">🔍 Click to zoom</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team B (Blue) -->
-    <div class="showcase-card" data-team="B">
+    <!-- Tab B (Blue) -->
+    <div id="tab-B" class="tab-content">
+      <div class="showcase-card" data-team="B">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team B (Blue) Proposal</span>
@@ -321,9 +333,11 @@
         <div class="zoom-overlay">🔍 Click to zoom</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team C (Yellow) -->
-    <div class="showcase-card" data-team="C">
+    <!-- Tab C (Yellow) -->
+    <div id="tab-C" class="tab-content">
+      <div class="showcase-card" data-team="C">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team C (Yellow) Proposal</span>
@@ -345,9 +359,11 @@
         <div class="zoom-overlay">🔍 Click to zoom</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team D (Red) -->
-    <div class="showcase-card" data-team="D">
+    <!-- Tab D (Red) -->
+    <div id="tab-D" class="tab-content">
+      <div class="showcase-card" data-team="D">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team D (Red) Proposal</span>
@@ -369,7 +385,7 @@
         <div class="zoom-overlay">🔍 Click to zoom</div>
       </div>
     </div>
-
+    </div>
   </div>
 
   <h2>IV. Field Validation & Panel Feedback</h2>
@@ -411,6 +427,21 @@
 </footer>
 
 <script>
+  function switchTab(team) {
+      // Deactivate all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.remove('active');
+      });
+      // Deactivate all tab content
+      document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.remove('active');
+      });
+      // Activate selected button
+      document.querySelector(`.tab-btn[data-team="${team}"]`).classList.add('active');
+      // Activate selected content
+      document.getElementById(`tab-${team}`).classList.add('active');
+  }
+
   function openLightbox(imgSrc) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');

@@ -273,9 +273,19 @@
     現地調査から抽出されたペインポイントに対し、日台の学生チームは言語と専攻の壁を越え、アジャイルなイテレーションを通じて4つのMVPソリューションを共創しました。画像をクリックすると、提案スライドやプロトタイプの拡大プレビューが表示されます：
   </p>
 
-  <div class="showcase-grid">
-    <!-- Team A (Green) -->
-    <div class="showcase-card" data-team="A">
+  <!-- Interactive Tabs for 4 Groups -->
+  <div class="tabs-container">
+    <div class="tab-buttons">
+      <span class="tab-label">チーム提案：</span>
+      <button class="tab-btn active" data-team="A" onclick="switchTab('A')" title="緑チーム (Team A)">A</button>
+      <button class="tab-btn" data-team="B" onclick="switchTab('B')" title="青チーム (Team B)">B</button>
+      <button class="tab-btn" data-team="C" onclick="switchTab('C')" title="黄チーム (Team C)">C</button>
+      <button class="tab-btn" data-team="D" onclick="switchTab('D')" title="赤チーム (Team D)">D</button>
+    </div>
+
+    <!-- Tab A (Green) -->
+    <div id="tab-A" class="tab-content active">
+      <div class="showcase-card" data-team="A">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team A (Green) 提案</span>
@@ -297,9 +307,11 @@
         <div class="zoom-overlay">🔍 クリックして拡大</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team B (Blue) -->
-    <div class="showcase-card" data-team="B">
+    <!-- Tab B (Blue) -->
+    <div id="tab-B" class="tab-content">
+      <div class="showcase-card" data-team="B">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team B (Blue) 提案</span>
@@ -321,9 +333,11 @@
         <div class="zoom-overlay">🔍 クリックして拡大</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team C (Yellow) -->
-    <div class="showcase-card" data-team="C">
+    <!-- Tab C (Yellow) -->
+    <div id="tab-C" class="tab-content">
+      <div class="showcase-card" data-team="C">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team C (Yellow) 提案</span>
@@ -345,9 +359,11 @@
         <div class="zoom-overlay">🔍 クリックして拡大</div>
       </div>
     </div>
+    </div>
 
-    <!-- Team D (Red) -->
-    <div class="showcase-card" data-team="D">
+    <!-- Tab D (Red) -->
+    <div id="tab-D" class="tab-content">
+      <div class="showcase-card" data-team="D">
       <div class="showcase-info">
         <div>
           <span class="team-badge">Team D (Red) 提案</span>
@@ -369,7 +385,7 @@
         <div class="zoom-overlay">🔍 クリックして拡大</div>
       </div>
     </div>
-
+    </div>
   </div>
 
   <h2>四、 現地検証と評審の講評</h2>
@@ -411,6 +427,21 @@
 </footer>
 
 <script>
+  function switchTab(team) {
+      // Deactivate all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.remove('active');
+      });
+      // Deactivate all tab content
+      document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.remove('active');
+      });
+      // Activate selected button
+      document.querySelector(`.tab-btn[data-team="${team}"]`).classList.add('active');
+      // Activate selected content
+      document.getElementById(`tab-${team}`).classList.add('active');
+  }
+
   function openLightbox(imgSrc) {
       const modal = document.getElementById('lightbox-modal');
       const img = document.getElementById('lightbox-img');
